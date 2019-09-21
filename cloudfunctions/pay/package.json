@@ -1,0 +1,17 @@
+{
+      "name": "pay",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+            "request": "^2.88.0",
+            "tcb-router": "^1.1.2",
+            "tenpay": "^2.1.18",
+            "wx-server-sdk": "latest"
+      }
+}

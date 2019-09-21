@@ -1,0 +1,87 @@
+.contain {
+     width: 100%;
+     padding: 30rpx 30rpx;
+     box-sizing: border-box;
+}
+
+.top {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 50rpx;
+     margin-top: 20rpx;
+}
+
+.title {
+     font-size: 32rpx;
+     font-weight: 600;
+     letter-spacing: 2rpx;
+     width: calc( 100% - 60rpx);
+     line-height: 50rpx;
+}
+
+.ico {
+     width: 50rpx;
+     height: 50rpx;
+}
+
+.descontain {
+     margin-top: 30rpx;
+     background: #f8f8f8;
+     border-radius: 15rpx;
+     width: 100%;
+     padding: 14rpx 24rpx 24rpx 24rpx;
+     box-sizing: border-box;
+}
+
+.destext {
+     padding-top: 10rpx;
+     font-size: 29rpx;
+     line-height: 44rpx;
+     color: #a7adb8;
+     letter-spacing: 1rpx;
+}
+
+.contains {
+     width: 100%;
+     padding-bottom: 30rpx;
+     border-bottom: 1rpx solid #f8f8f8;
+}
+
+.bottom {
+     left: 0rpx;
+     bottom: 0rpx;
+     right: 0rpx;
+     position: fixed;
+     align-items: center;
+     display: flex;
+     width: 100%;
+     height: 100rpx;
+     box-shadow: 0 0 24rpx rgba(0, 0, 0, 0.212);
+}
+
+button {
+     width: 49%;
+     height: 100%;
+     background: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: none;
+}
+
+button::after {
+     border: none;
+}
+
+.btxt {
+     padding-left: 20rpx;
+     font-size: 34rpx;
+     letter-spacing: 2rpx;
+}
+
+.center {
+     font-weight: 2%;
+     border-right: 2rpx solid #a7adb8;
+     height: 32rpx;
+}

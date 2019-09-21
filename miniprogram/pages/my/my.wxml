@@ -1,0 +1,90 @@
+<view class="top_box">
+      <view class="top_1">
+            <view wx:if="{{!userinfo}}" class="top_1_1" bindtap="go" data-go="/pages/login/login">点击登录</view>
+            <view wx:if="{{userinfo}}" class="top_1_1">
+                  <open-data type="userNickName"></open-data>
+            </view>
+            <view class="top_1_2" wx:if="{{!userinfo}}">一秒登录，体验所有功能</view>
+             <view class="top_1_2" wx:if="{{userinfo}}" bindtap="go" data-go="/pages/edit/edit" data-status="1">点击修改资料</view>
+      </view>
+      <view class="top_2">
+            <view class="avator">
+                  <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
+                  <image wx:if="{{!userinfo}}" src="/images/avator.png"></image>
+            </view>
+      </view>
+</view>
+<view class="center_box">
+      <view class="center_1" bindtap="go" data-go="/pages/sell/list/list" data-status="1">
+            <image src="/images/history.png"></image>
+            <view>我的发布</view>
+      </view>
+      <view class="center_1" bindtap="go" data-go="/pages/order/list/list" data-status="1">
+            <image src="/images/publish.png"></image>
+            <view>我的购买</view>
+      </view>
+      <view class="center_1" bindtap="go" data-go="/pages/help/help">
+            <image src="/images/help.png"></image>
+            <view>帮助中心</view>
+      </view>
+</view>
+<view class="blank"></view>
+<view class="bottom_box">
+      <view class="bottom_card" bindtap="go" data-go="/pages/parse/parse" data-status="1">
+            <view class="bottom_1">
+                  <image src="/images/parse.png"></image>
+                  <view>我的钱包</view>
+            </view>
+            <image src="/images/go.png"></image>
+      </view>
+      <view class="bottom_card" bindtap="go" data-go="/pages/kefu/kefu" data-status="1">
+            <view class="bottom_1">
+                  <image src="/images/kefu.png"></image>
+                  <view>联系客服</view>
+            </view>
+            <image src="/images/go.png"></image>
+      </view>
+      <view class="bottom_card">
+            <view class="bottom_1">
+                  <image src="/images/feedback.png"></image>
+                  <view>问题反馈</view>
+            </view>
+            <image src="/images/go.png"></image>
+            <button open-type="feedback"></button>
+      </view>
+      <view class="bottom_card" bindtap="showShare">
+            <view class="bottom_1">
+                  <image src="/images/fen.png"></image>
+                  <view>好用分享</view>
+            </view>
+            <image src="/images/go.png"></image>
+      </view>
+      <view class="bottom_card" bindtap="go" data-go="/pages/about/about">
+            <view class="bottom_1">
+                  <image src="/images/guanyu.png"></image>
+                  <view>关于程序</view>
+            </view>
+            <image src="/images/go.png"></image>
+      </view>
+</view>
+
+<!--分享弹出层-->
+<van-popup show="{{ showShare }}" bind:close="closePop">
+      <view class="share_contain">
+            <view class="share_border"></view>
+            <view class="share_title">分享到</view>
+            <view class="share_box">
+                  <view class="share_one">
+                        <image src="/images/weixin.png"></image>
+                        <view>微信好友</view>
+                        <button class="share_button" open-type="share"></button>
+                  </view>
+                  <view class="share_bor"></view>
+                  <view class="share_one">
+                        <image src="/images/pyq.png"></image>
+                        <view>朋友圈</view>
+                        <button class="share_button" bindtap="preview" data-link="{{poster}}"></button>
+                  </view>
+            </view>
+      </view>
+</van-popup>

@@ -1,0 +1,174 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"appid": "wx383426ad9ffe1075",
+	"projectname": "%E6%A0%A1%E5%9B%AD%E4%BA%8C%E6%89%8B%E4%B9%A6",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 17,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "详情页",
+					"pathName": "pages/detail/detail",
+					"query": "scene=3c4c6d855d70f8b6124543920c2934e6",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "支付成功",
+					"pathName": "pages/success/success",
+					"query": "id=efdeb2615d72487b1319b22650cd56cb",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "【订单】详情",
+					"pathName": "pages/order/detail/detail",
+					"query": "id=5d262bd45d7264f5134049797256c6f9",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "【订单】列表",
+					"pathName": "pages/order/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "钱包",
+					"pathName": "pages/parse/parse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/recharge/recharge",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "pages/reflect/reflect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "我的发布【列表】",
+					"pathName": "pages/sell/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "我的发布【详情】",
+					"pathName": "pages/sell/detail/detail",
+					"query": "id=efdeb2615d70eb6012393ac94afadcf6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "【编辑资料】",
+					"pathName": "pages/edit/edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "帮助中心",
+					"pathName": "pages/help/help",
+					"scene": null
+				}
+			]
+		}
+	}
+}

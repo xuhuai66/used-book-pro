@@ -1,0 +1,35 @@
+.contain {
+      width: 100%;
+      height: 100%;
+      position: relative;
+}
+
+.bg {
+      position: absolute;
+      left: 0rpx;
+      top: 0rpx;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+}
+
+.go {
+      position: absolute;
+      right: 30rpx;
+      top: 150rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.781);
+      color: #000;
+      width: 160rpx;
+      height: 60rpx;
+       border-radius: 25rpx;
+      z-index: 9;
+}
+
+.go view {
+      font-size: 28rpx;
+      letter-spacing: 4rpx;
+}

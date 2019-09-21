@@ -1,0 +1,112 @@
+<wxs src="../../common.wxs" module="morejs" />
+<view class="top_contain">
+      <view class="top_img">
+            <image lazy-load src="{{publishinfo.bookinfo.pic}}"></image>
+      </view>
+      <view class="title text-cut">{{publishinfo.bookinfo.title}}【第{{publishinfo.bookinfo.edition}}】</view>
+      <view class="author  text-cut">{{publishinfo.bookinfo.author}}</view>
+      <view class="price_box">
+            <view class="now_price">￥{{publishinfo.price}}.00元</view>
+            <view class="pre_price">定价：￥{{publishinfo.bookinfo.price}}元</view>
+      </view>
+</view>
+<view class="blank"></view>
+<view class="center_contain">
+      <view bindtap="changeTitle" data-id="{{ true }}" class="c_title {{first_title?'title_on':''}}">发布信息</view>
+      <view bindtap="changeTitle" data-id="{{ false }}" class="c_title {{first_title?'':'title_on'}}">图书详情</view>
+</view>
+<!--发布信息-->
+<view hidden="{{!first_title}}">
+      <view class="user_box">
+            <image lazy-load src="{{userinfo.info.avatarUrl}}"></image>
+            <view class="des_box">
+                  <view class="user_name">{{userinfo.info.nickName}}</view>
+                  <view class="local_box">
+                        <image src="/images/local.png"></image>
+                        <view>{{userinfo.campus.name}}</view>
+                  </view>
+            </view>
+            <view class="sex">
+                  <image lazy-load src="{{userinfo.info.gender==0?'/images/none.png':(userinfo.info.gender==1?'/images/boy.png':'/images/girl.png')}}"></image>
+            </view>
+      </view>
+      <view class="time_box">
+            <view class="kind">{{collegeName.name}}类书</view>
+            <view class="time">发布于{{morejs.timelog(publishinfo.creat)}}</view>
+      </view>
+      <view class="deliver_box">
+            <view class="deliver_first">
+                  <view class="deliver_title">取货方式：</view>
+                  <view class="deliver_kind">{{publishinfo.deliveryid==0?'自提':'帮送'}}</view>
+            </view>
+            <view class="deliver_place">{{publishinfo.place}}</view>
+      </view>
+      <view class="palceInput_box" wx:if="{{publishinfo.deliveryid==1}}">
+            <input bindinput="placeInput" placeholder="卖家可以帮送，请填写您的收货地址"></input>
+      </view>
+      <view class="notes_box" wx:if="{{publishinfo.notes!==''}}">
+            <view class="notes">
+                  <view class="notes_text">备注信息:</view>
+                  <view class="notes_text">{{publishinfo.notes}}</view>
+            </view>
+      </view>
+</view>
+<!--图书详情-->
+<view hidden="{{first_title}}">
+      <view class="detail_contain">
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">isbn编号</view>
+                  <view class="detail_content">{{bookinfo.isbn}}</view>
+            </view>
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">出版社</view>
+                  <view class="detail_content">{{bookinfo.publisher}}</view>
+            </view>
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">出版地</view>
+                  <view class="detail_content">{{bookinfo.pubplace}}</view>
+            </view>
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">出版时间</view>
+                  <view class="detail_content">{{bookinfo.pubdate}}</view>
+            </view>
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">装帧方式</view>
+                  <view class="detail_content">{{bookinfo.binding}}</view>
+            </view>
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">开本</view>
+                  <view class="detail_content">{{bookinfo.format}}</view>
+            </view>
+            <view class="detail_card detail_border ">
+                  <view class="detail_title">中图法分类</view>
+                  <view class="detail_content">{{bookinfo.class}}</view>
+            </view>
+            <view class="detail_card">
+                  <view class="detail_title">摘要</view>
+                  <view class="detail_content">{{bookinfo.summary}}</view>
+            </view>
+      </view>
+</view>
+<view style="height: 96rpx;"></view>
+<!--底部导航-->
+<view class="tabbar">
+      <view class="t_card">
+            <image src="/images/home.png"></image>
+            <text>首页</text>
+            <button class="t_button" bindtap="home"></button>
+      </view>
+      <view class="t_card">
+            <image src="/images/contact.png"></image>
+            <text>反馈</text>
+            <button class="t_button" bindtap="go" data-go="/pages/kefu/kefu"></button>
+      </view>
+      <view class="t_card">
+            <image src="/images/share.png"></image>
+            <text>分享</text>
+            <button class="t_button" open-type="share"></button>
+      </view>
+      <view class="buy_box">
+           <view class="buy shadow" bindtap="buy">{{publishinfo.status==0?'立即购买':'刚刚被抢光了'}}</view>
+      </view>
+</view>

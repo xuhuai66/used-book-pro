@@ -1,0 +1,61 @@
+<view class="contain">
+      <view class="card">
+            <image class="top_over" src="/images/over.png"></image>
+            <image class="bot_over" src="/images/over.png"></image>
+            <view class="goods_box">
+                  <image class="goods_img" src="{{detail.bookinfo.pic}}"></image>
+                  <view class="goods_content">
+                        <view class="goods_title text-cut">{{detail.bookinfo.title}}(第{{detail.bookinfo.edition}})</view>
+                        <view class="goods_author text-cut">{{detail.bookinfo.author}}</view>
+                  </view>
+                  <view class="goods_price">￥{{detail.price}}元</view>
+            </view>
+            <view class="border"></view>
+            <view class="list">
+                  <view class="list_1">{{detail.deliveryid==0?'自提':'帮送'}}</view>
+                  <view class="list_2">{{detail.deliveryid==0?detail.ztplace:detail.psplace}}</view>
+            </view>
+            <view class="border"></view>
+            <view class="list">
+                  <view class="list_1">{{detail.status==1?'等待收货中':(detail.status==2?'交易完成':'订单已取消')}}</view>
+                  <view class="list_2">{{detail.status==1?'系统已电话邮件通知卖家准备':(detail.status==2?'要不再来一单':'祝您生活愉快')}}</view>
+            </view>
+            <view class="border"></view>
+            <view class="orderfare">ORDER FARE</view>
+            <view class="fare_box">
+                  <view class="fare_title">下单时间</view>
+                  <view class="fare_des">{{creatTime}}</view>
+            </view>
+            <view class="fare_box">
+                  <view class="fare_title">支付金额</view>
+                  <view class="fare_des">￥{{detail.price}}.00元</view>
+            </view>
+            <view class="border"></view>
+            <view class="orderfare">CONTACT SELLER</view>
+            <view class="fare_box" bindtap="phone" data-phone="{{userinfo.phone}}">
+                  <view class="fare_title">电话</view>
+                  <view class="fare_des">{{userinfo.phone}}</view>
+            </view>
+            <view class="fare_box" bindtap="copy" data-copy="{{userinfo.email}}" data-name="邮箱">
+                  <view class="fare_title">邮箱</view>
+                  <view class="fare_des">{{userinfo.email}}</view>
+            </view>
+            <view class="fare_box" wx:if="{{userinfo.wxnum!==''}}" bindtap="copy" data-copy="{{userinfo.wxnum}}" data-name="微信">
+                  <view class="fare_title">微信</view>
+                  <view class="fare_des">{{userinfo.wxnum}}</view>
+            </view>
+            <view class="fare_box" wx:if="{{userinfo.qqnum!==''}}" bindtap="copy" data-copy="{{userinfo.qqnum}}" data-name="QQ">
+                  <view class="fare_title">QQ</view>
+                  <view class="fare_des">{{userinfo.qqnum}}</view>
+            </view>
+            <view class="border"></view>
+            <view class="bot_box" wx:if="{{detail.status==1}}">
+                  <view class="cancel" bindtap="cancel" >取消订单</view>
+                  <view class="contact" bindtap="confirm">确认收货</view>
+            </view>
+            <view class="bot_box" >
+                  <view wx:if="{{detail.status==2||detail.status==3}}" class="delete" bindtap="delete">删除订单</view>
+            </view>
+
+      </view>
+</view>

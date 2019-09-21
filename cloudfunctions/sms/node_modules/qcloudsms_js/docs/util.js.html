@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: util.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: util.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*!
+ * qcloudsms_js
+ *
+ * @module util
+ *
+ */
+
+"use strict";
+
+/**
+ * Module dependencies.
+ * @ignore
+ */
+
+var crypto = require("crypto");
+var https = require("https");
+
+
+/**
+ * Module exports
+ * @ignore
+ */
+
+exports.getRandom = getRandom;
+exports.calculateSignature = calculateSignature;
+exports.request = request;
+exports.getCurrentTime = getCurrentTime;
+exports.assert = assert;
+exports.sha1sum = sha1sum;
+exports.calculateAuth = calculateAuth;
+
+
+/**
+ * Get a random number
+ *
+ * @return {number}
+ * @public
+ */
+function getRandom() {
+    return Math.round(Math.random() * 99999);
+}
+
+/**
+ * Get current time
+ *
+ * @return {number}
+ * @public
+ */
+function getCurrentTime() {
+    return Math.floor(Date.now()/1000);
+}
+
+/**
+ * Calculate a request signature according to parameters
+ *
+ * @param  {string}  appkey - sdk appkey
+ * @param  {string}  random - random string
+ * @param  {number}  time - unix timestamp time
+ * @param  {array}   phoneNumbers - phone number array
+ * @return {string}
+ * @public
+ */
+function calculateSignature(appkey, random, time, phoneNumbers) {
+    if (phoneNumbers) {
+        return crypto.createHash("sha256").update(
+            "appkey=" + appkey + "&amp;random=" + random + "&amp;time=" + time
+                + "&amp;mobile=" + phoneNumbers.join(","),
+            "utf-8"
+        ).digest("hex");
+    } else {
+        return crypto.createHash("sha256").update(
+            "appkey=" + appkey + "&amp;random=" + random + "&amp;time=" + time,
+            "utf-8"
+        ).digest("hex");
+    }
+}
+
+/**
+ * Calculate a voice uploading request signature
+ *
+ * @param  {string}  appkey - sdk appkey
+ * @param  {string}  random - random string
+ * @param  {number}  time - unix timestamp time
+ * @param  {string}  fileSha1sum - voice file sha1sum
+ * @return {string}
+ * @public
+ */
+function calculateAuth(appkey, random, time, fileSha1Sum) {
+    return crypto.createHash("sha256").update(
+        "appkey=" + appkey + "&amp;random=" + random + "&amp;time="
+            + time  + "&amp;content-sha1=" + fileSha1Sum,
+        "utf-8"
+    ).digest("hex");
+}
+
+/**
+ * Calculate sha1sum
+ *
+ * @param  {Buffer}  buf - raw buf
+ * @return {string}
+ * @public
+ */
+function sha1sum(buf) {
+    return crypto.createHash("sha1").update(buf).digest("hex");
+}
+
+
+/**
+ * Make a request and call given callback
+ *
+ * @param  {object}    options - request options
+ * @param  {function}  callback - request handler, method signature: function(error, response, responseData)
+ * @public
+ */
+function request(options, callback) {
+    var body;
+    if (options.body) {
+        body = options.body;
+        delete options.body;
+    }
+
+    var req = https.request(options, function(res) {
+        res.setEncoding("utf-8");
+        var resData = "";
+
+        res.on("data", function(data) {
+            resData += data;
+        });
+
+        res.on("error", function(err) {
+            callback(err, res, undefined);
+        });
+
+        res.on("end", function() {
+            res.req = options;
+            res.req.body = body;
+            callback(undefined, res, JSON.parse(resData));
+        });
+    });
+
+    req.on("error", function(err) {
+        callback(err, undefined, undefined);
+    });
+
+    if (body) {
+        if (Buffer.isBuffer(body)) {
+            req.write(body);
+        } else {
+            req.write(JSON.stringify(body));
+        }
+    }
+    req.end();
+}
+
+/**
+ * assert expression
+ *
+ * @param  {bool}    condition - assert condtion
+ * @param  {string}  message - assert failed message
+ * @public
+ */
+function assert(condition, message) {
+    if (!condition) {
+        message = message || "Assertion failed";
+        if (typeof Error !== "undefined") {
+            throw new Error(message);
+        }
+        // Fallback
+        throw message;
+    }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CodeVoiceSender.html">CodeVoiceSender</a></li><li><a href="FileVoiceSender.html">FileVoiceSender</a></li><li><a href="PromptVoiceSender.html">PromptVoiceSender</a></li><li><a href="SmsMobileStatusPuller.html">SmsMobileStatusPuller</a></li><li><a href="SmsMultiSender.html">SmsMultiSender</a></li><li><a href="SmsSingleSender.html">SmsSingleSender</a></li><li><a href="SmsStatusPuller.html">SmsStatusPuller</a></li><li><a href="TtsVoiceSender.html">TtsVoiceSender</a></li><li><a href="VoiceFileUploader.html">VoiceFileUploader</a></li></ul><h3>Global</h3><ul><li><a href="global.html"></a></li><li><a href="global.html#assert">assert</a></li><li><a href="global.html#calculateAuth">calculateAuth</a></li><li><a href="global.html#calculateSignature">calculateSignature</a></li><li><a href="global.html#createQcloudSms">createQcloudSms</a></li><li><a href="global.html#getCurrentTime">getCurrentTime</a></li><li><a href="global.html#getRandom">getRandom</a></li><li><a href="global.html#request">request</a></li><li><a href="global.html#sha1sum">sha1sum</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jul 01 2018 18:32:59 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

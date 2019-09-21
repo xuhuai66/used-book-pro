@@ -1,0 +1,404 @@
+page {
+      background: #f6f7fa;
+}
+
+.top_steps {
+      position: fixed;
+      top: 0rpx;
+      left: 0rpx;
+      width: 100%;
+      z-index: 9;
+}
+
+.a_contain {
+      padding: 32rpx;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      background: #fff;
+      box-shadow: 0 30rpx 20rpx rgb(240, 240, 240);
+}
+
+.a_inp {
+      width: 100%;
+      height: 76rpx;
+      background: #f8fafd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      border-radius: 38rpx;
+}
+
+.a_scan {
+      width: 40rpx;
+      height: 38rpx;
+      padding-left: 30rpx;
+}
+
+.a_inp input {
+      width: 420rpx;
+      font-size: 28rpx;
+      color: #aaaaab;
+      height: 100%;
+      letter-spacing: 2rpx;
+}
+
+.a_pla {
+      font-size: 27rpx;
+      color: #aaaaab;
+}
+
+.a_confirm {
+      width: 170rpx;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      border-radius: 36rpx;
+      color: #fff;
+      font-size: 28rpx;
+      letter-spacing: 4rpx;
+}
+
+.a_isbn {
+      margin-top: 40rpx;
+      width: 350rpx;
+      height: 350rpx;
+}
+
+.a_des {
+      margin-top: 30rpx;
+      font-size: 30rpx;
+      color: #aaaaab;
+      width: 450rpx;
+      text-align: center;
+      letter-spacing: 3rpx;
+      line-height: 50rpx;
+}
+
+.a_next {
+      padding-top: 20rpx;
+      width: 40rpx;
+      height: 30rpx;
+}
+
+.a_sao {
+      width: 100%;
+      padding-top: 50rpx;
+      display: flex;
+      justify-content: center;
+}
+
+.a_sao button {
+      width: 500rpx;
+      height: 80rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fbbd08;
+      color: #fff;
+      border-radius: 40rpx;
+      letter-spacing: 4rpx;
+      font-size: 32rpx;
+      border: none;
+      font-weight: 500;
+}
+
+.a_sao button::after {
+      border: none;
+}
+
+/*步骤二*/
+
+.b_contain {
+      padding: 32rpx;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      background: #fff;
+      box-shadow: 0 30rpx 20rpx rgb(240, 240, 240);
+}
+
+.b_top {
+      display: flex;
+}
+
+.b_poster {
+      width: 270rpx;
+      display: flex;
+      justify-content: center;
+}
+
+.b_poster image {
+      width: 250rpx;
+      height: 250rpx;
+}
+
+.b_title {
+      width: 100%;
+      font-size: 32rpx;
+      line-height: 50rpx;
+      font-weight: 600;
+      letter-spacing: 2rpx;
+}
+
+.b_content {
+      width: 410rpx;
+      height: 250rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+
+.b_dcontain {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 4rpx;
+}
+
+.b_author {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #000;
+}
+
+.b_price {
+      font-size: 30rpx;
+      color: rgb(255, 0, 0);
+      letter-spacing: 2rpx;
+      white-space: nowrap;
+}
+
+.b_des {
+      font-size: 26rpx;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #aaaaab;
+}
+
+/*步骤二输入内容*/
+
+.b_ccontain {
+      width: 100%;
+      padding: 32rpx;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+}
+
+.b_card {
+      width: 100%;
+      padding: 40rpx 30rpx;
+      display: flex;
+      border-radius: 18rpx;
+      box-shadow: 0 0 20rpx #ebebeb;
+      flex-direction: column;
+      background: #fff;
+      box-sizing: border-box;
+}
+
+.b_border {
+      border-bottom: 1rpx solid #eee;
+      width: 100%;
+      height: 2rpx;
+}
+
+.b_bar {
+      height: 90rpx;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.kind-group {
+      display: flex;
+}
+
+.b_radio {
+      padding-left: 20rpx;
+      font-size: 28rpx;
+      display: flex;
+      align-items: center;
+}
+
+.b_radio radio {
+      transform: scale(0.8);
+}
+
+.b_name {
+      font-size: 30rpx;
+      letter-spacing: 2rpx;
+}
+
+.b_picker {
+      font-size: 28rpx;
+      line-height: 30rpx;
+      display: flex;
+      align-items: center;
+      color: #8c9aa8;
+}
+
+.right {
+      padding-left: 10rpx;
+      width: 26rpx;
+      height: 26rpx;
+}
+
+picker {
+      display: flex;
+      align-items: center;
+}
+
+.b_notes {
+      width: 100%;
+      padding: 10rpx;
+      display: flex;
+      box-sizing: border-box;
+}
+
+.b_text {
+      width: 100%;
+      height: 200rpx;
+      padding: 20rpx;
+      border-radius: 10rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      background: rgb(238, 238, 238);
+}
+
+.b_text textarea {
+      width: 100%;
+      height: 130rpx;
+      font-size: 28rpx;
+      color: #8c9aa8;
+      border-spacing: 2rpx;
+}
+
+.b_less {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #8c9aa8;
+}
+
+.b_place {
+      width: 100%;
+      padding: 10rpx;
+      display: flex;
+      box-sizing: border-box;
+}
+
+.b_plecebox {
+      width: 100%;
+      height: 80rpx;
+      padding: 0 20rpx;
+      border-radius: 10rpx;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      background: rgb(238, 238, 238);
+}
+
+.b_plecebox input {
+      width: 100%;
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #8c9aa8;
+}
+
+.b_tips {
+      font-size: 26rpx;
+      line-height: 45rpx;
+      color: #8c9aa8;
+}
+
+.b_tips text {
+      color: rgb(255, 0, 0);
+      font-size: 30rpx;
+}
+
+.b_nobi {
+      font-size: 28rpx;
+      color: #8c9aa8;
+}
+
+.b_publish {
+      margin-top: 30rpx;
+      width: 100%;
+      height: 80rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fbbd08;
+      color: #fff;
+      border-radius: 40rpx;
+      letter-spacing: 4rpx;
+      font-size: 32rpx;
+      border: none;
+      font-weight: 500;
+}
+
+.c_contain {
+      position: relative;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-sizing: border-box;
+}
+
+.c_success {
+      width: 145rpx;
+      height: 184rpx;
+      margin-top: 130rpx;
+}
+
+.c_title {
+      font-size: 40rpx;
+      margin-top: 30rpx;
+      font-weight: 600;
+}
+
+.c_des {
+      margin-top: 30rpx;
+      font-size: 28rpx;
+      line-height: 45rpx;
+      color: #898989;
+}
+
+.c_see {
+      margin-top: 40rpx;
+      font-size: 32rpx;
+      letter-spacing: 3rpx;
+      color: #4f93ea;
+}
+
+.c_again {
+      margin-top: 40rpx;
+      width: 500rpx;
+      height: 80rpx;
+      border-radius: 40rpx;
+      background: #fbbd08;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32rpx;
+      letter-spacing: 4rpx;
+}

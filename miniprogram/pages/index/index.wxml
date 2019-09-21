@@ -1,0 +1,99 @@
+<wxs src="../../common.wxs" module="morejs" />
+<view class="top_box">
+      <view class="search_box" bindtap="search">
+            <image class="search_ico" src="/images/search.png"></image>
+            <view class="search_text">搜索想要的书籍，例如：机械设计</view>
+      </view>
+      <image bindtap="changeCard" class="top_list" src="{{iscard?'/images/list.png':'/images/card.png'}}"></image>
+</view>
+<swiper class="banner" indicator-dots autoplay indicator-active-color="#fbbd08" circular>
+      <block wx:for="{{banner}}" wx:key="id">
+            <swiper-item>
+                  <image src="{{item.img}}" bindtap="goweb" data-web="{{item}}" class="banner_image" />
+            </swiper-item>
+      </block>
+</swiper>
+<view class="space"></view>
+<!--分类导航-->
+<view class="{{scrollTop>310?'nofixed':''}}">
+</view>
+<view class="kind_contain {{scrollTop>310?'fixed':''}}">
+      <view class="nav-item {{-2==collegeCur?'tab-on':''}}" bindtap="selectAll">
+            <view class="nav-text">全部</view>
+      </view>
+      <scroll-view scroll-x class="nav" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+            <view class="nav-item" wx:for="{{college}}" wx:key="id" bindtap="collegeSelect" data-id="{{index}}">
+                  <view class="nav-text {{index==collegeCur+1?'tab-on':''}}">{{item.name}}</view>
+            </view>
+      </scroll-view>
+      <view class="kind_img" bindtap="showlist">
+            <image src="{{showList?'/images/l_down.png':'/images/l_right.png'}}" />
+      </view>
+      <view class="kindlist_box" wx:if="{{showList}}">
+            <view class="kindlist_card">
+                  <view class="list_grid">
+                        <block wx:for="{{college}}" wx:key="id">
+                              <view class="list_one" bindtap="collegeSelect" data-id="{{index}}" data-class="{{item.id}}">
+                                    <view class="{{index==collegeCur+1?'list-on':''}}">{{item.name}}</view>
+                              </view>
+                        </block>
+                  </view>
+            </view>
+      </view>
+</view>
+<!--宫格显示-->
+<view hidden="{{!iscard}}">
+      <view class="card_grid" wx:if="{{list.length>0}}">
+            <block wx:for="{{list}}" wx:key="_id">
+                  <view class="card_one" bindtap="detail" data-id="{{item._id}}">
+                        <image lazy-load class="card_poster" src="{{item.bookinfo.pic}}"></image>
+                        <view class="card_title text-cut">{{item.bookinfo.title}}
+                        </view>
+                        <view class="card_author text-cut">{{item.bookinfo.author}}
+                        </view>
+                        <view class="card_between">
+                              <view class="card_price">￥{{item.price}}.00元</view>
+                              <image class="card_buy" src="/images/buy.png"></image>
+                        </view>
+                  </view>
+            </block>
+      </view>
+</view>
+<!--列表显示-->
+<view hidden="{{iscard}}">
+      <block wx:if="{{list.length>0}}">
+            <block wx:for="{{list}}" wx:key="_id">
+                  <view class="list_box" bindtap="detail" data-id="{{item._id}}">
+                        <image class="list_poster" src="{{item.bookinfo.pic}}"></image>
+                        <view class="list_content">
+                              <view class="list_word">
+                                    <view class="list_title text-cut">{{item.bookinfo.title}}
+                                    </view>
+                                    <view class="list_author text-cut">{{item.bookinfo.author}}
+                                    </view>
+                              </view>
+                              <view class="list_between">
+                                    <view class="list_price">￥{{item.price}}.00元</view>
+                                    <view class="list_time">{{morejs.timelog(item.creat )}}发布
+                                    </view>
+                              </view>
+                        </view>
+                  </view>
+            </block>
+      </block>
+</view>
+<!--无内容显示-->
+<view class="nocontent" wx:if="{{list.length==0}}">
+      <image src="/images/blank.png"></image>
+      <view class="blank_text">这里空空如也~</view>
+</view>
+
+<block wx:if="{{list.length>10}}">
+      <import src="/common.wxml" />
+      <template is="loadmore" data="{{nomore}}" />
+</block>
+<van-transition show="{{ scrollTop>500 }}" custom-class="block" duration="600">
+      <view class="totop" bindtap="gotop">
+            <image src="/images/top.png"></image>
+      </view>
+</van-transition>

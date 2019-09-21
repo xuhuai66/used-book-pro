@@ -1,0 +1,19 @@
+<view class="contain">
+      <view class="card">
+            <view class="title">我的余额</view>
+            <view class="num">{{num}}.00</view>
+      </view>
+      <view class="list">
+            <view>提现金额</view>
+            <input disabled="{{!canReflect}}" value="{{key}}" bindinput="keyInput" type="number" placeholder="请输入提现金额"></input>
+      </view>
+      <view class="confirm" bindtap="check">确认</view>
+      <view class="tips">
+            <view class="t1">
+                  <image src="/images/about.png" /> 提现说明：
+            </view>
+            <view class="t2">1. 提现利率为1%</view>
+            <view class="t2">2. 为避免浪费请求资源，请满10元提现</view>
+            <view class="t2">3. 本程序竭力保证每位同学的利益，出现任何问题不要慌，马上和客服联系处理</view>
+      </view>
+</view>

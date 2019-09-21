@@ -1,0 +1,36 @@
+<view class="top-bg" style="background-image: url('/images/login_bg.png')"></view>
+<view class="contain">
+      <view class="card">
+            <view class="title">登记注册</view>
+            <button class="phone" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+                  <block wx:if="{{phone==''}}"> 请点击获取您的手机号</block>
+                  <block wx:if="{{phone!==''}}"> {{phone}}</block>
+                  <image wx:if="{{phone==''}}" class="right" src="/images/right.png" />
+            </button>
+            <picker bindchange="choose" value="{{ids}}" range="{{campus}}" range-key="name">
+                  <view class="campus">
+                        <block wx:if="{{ids!==-1}}">当前选择：{{campus[ids].name}}</block>
+                        <block wx:if="{{ids==-1}}">请选择您所在校区</block>
+                        <image class="right" src="/images/right.png" />
+                  </view>
+            </picker>
+             <view class="contact">
+                  <input bindinput="emInput" value="{{email}}" maxlength="30" placeholder-class="pache" placeholder="输入您的邮箱地址" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" value="{{wxnum}}" maxlength="30" placeholder-class="pache" placeholder="输入您的微信号(选填)" />
+            </view>
+            <view class="contact">
+                  <input type="number" bindinput="qqInput" value="{{qqnum}}" maxlength="20" placeholder-class="pache" placeholder="输入您的QQ号(选填)" />
+            </view>
+      </view>
+      <!--底部确认-->
+      <button class="confirm" open-type='getUserInfo' bindgetuserinfo="getUserInfo">注册并登录</button>
+      <view class="shen_title">
+            <image class="about" src="/images/about.png" />使用申明
+      </view>
+      <view class="des">1. 请确保手机号和邮箱百分百有效，之后将用于发送实时订单通知。</view>
+      <view class="des">2. 在未经您同意及确认之前，本程序不会将您的注册信息用于任何其它商业目的。</view>
+      <view class="des">3. 本程序将对您所提供的资料进行严格的管理及保护，本程序将使用相应的技术，防止您的个人资料丢失、被盗用或遭篡改。</view>
+      <view class="des">4. 请您放心使用！</view>
+</view>

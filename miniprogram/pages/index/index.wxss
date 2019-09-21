@@ -1,0 +1,325 @@
+.top_box {
+      width: 100%;
+      background: #fbbd08;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20rpx 30rpx;
+      box-sizing: border-box;
+}
+
+.top_list {
+      width: 50rpx;
+      height: 50rpx;
+}
+
+.search_box {
+      width: 620rpx;
+      height: 66rpx;
+      border-radius: 33rpx;
+      background: #fff;
+      display: flex;
+      align-items: center;
+}
+
+.search_ico {
+      padding-left: 30rpx;
+      width: 32rpx;
+      height: 32rpx;
+}
+
+.search_text {
+      padding-left: 10rpx;
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: rgb(167, 167, 167);
+}
+
+.banner {
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      height: 184rpx;
+}
+
+.banner_image {
+      width: 100%;
+      padding: 16rpx 16rpx 12rpx 16rpx;
+      display: flex;
+      box-sizing: border-box;
+      height: 160rpx;
+}
+
+::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      color: transparent;
+}
+
+.space {
+      width: 100%;
+      height: 20rpx;
+      background: #eee;
+}
+
+.kind_contain {
+      width: 100%;
+      height: 90rpx;
+      display: flex;
+      border-bottom: 1rpx solid #eee;
+      background: #fff;
+      align-items: center;
+      position: relative;
+}
+
+.nav {
+      width: calc(100% - 180rpx);
+      height: 100%;
+      white-space: nowrap;
+      display: flex;
+      box-sizing: border-box;
+}
+
+.nav-item {
+      width: 100rpx;
+      height: 100%;
+      display: inline-block;
+      font-size: 32rpx;
+}
+
+.nav-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 4rpx;
+      box-sizing: border-box;
+}
+
+.tab-on {
+      color: #fbbd08;
+      font-size: 32rpx !important;
+      font-weight: 600;
+      border-bottom: 4rpx solid #fbbd08 !important;
+}
+
+.kind_img {
+      width: 60rpx;
+      height: 60rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.kind_img image {
+      width: 32rpx;
+      height: 32rpx;
+}
+
+.kindlist_box {
+      position: absolute;
+      width: 100%;
+      top: 90rpx;
+      left: 0rpx;
+      border-bottom: 1rpx solid #eee;
+}
+
+.kindlist_card {
+      padding: 20rpx 20rpx 0 20rpx;
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      background: #fff;
+}
+
+.list_grid {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.list_one {
+      width: 25%;
+      padding: 0 10rpx 20rpx 10rpx;
+      display: flex;
+      box-sizing: border-box;
+}
+
+.list_one view {
+      width: 100%;
+      height: 60rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1rpx solid #eee;
+      border-radius: 10rpx;
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+}
+
+.list-on {
+      background: #fbbd08;
+      color: #fff;
+      border: none !important;
+}
+
+.card_grid {
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      padding: 20rpx 0rpx;
+      flex-wrap: wrap;
+}
+
+.card_one {
+      margin-top: 20rpx;
+      width: 50%;
+      padding: 20rpx;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+}
+
+.card_poster {
+      width: 260rpx;
+      height: 260rpx;
+}
+
+.card_title {
+      width: 100%;
+      font-size: 30rpx;
+      letter-spacing: 3rpx;
+      margin-top: 20rpx;
+      line-height: 45rpx;
+}
+
+.card_author {
+      width: 100%;
+      font-size: 26rpx;
+      letter-spacing: 3rpx;
+      line-height: 40rpx;
+      color: rgb(129, 129, 129);
+}
+
+.card_between {
+      margin-top: 5rpx;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+}
+
+.card_price {
+      font-size: 33rpx;
+      color: rgb(255, 0, 0);
+}
+
+.card_buy {
+      padding-right: 10rpx;
+      width: 40rpx;
+      height: 40rpx;
+}
+
+.list_box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20rpx;
+      box-sizing: border-box;
+      margin-top: 10rpx;
+}
+
+.list_poster {
+      width: 230rpx;
+      height: 230rpx;
+}
+
+.list_content {
+      height: 230rpx;
+      width: calc(100% - 230rpx);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 10rpx;
+      box-sizing: border-box;
+}
+
+.list_word {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+}
+
+.list_title {
+      width: 100%;
+      font-size: 32rpx;
+      letter-spacing: 3rpx;
+      line-height: 45rpx;
+}
+
+.list_author {
+      padding-top: 10rpx;
+      width: 100%;
+      font-size: 27rpx;
+      letter-spacing: 3rpx;
+      line-height: 40rpx;
+      color: rgb(129, 129, 129);
+}
+
+.list_between {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1rpx solid #eee;
+      padding-bottom: 10rpx;
+}
+
+.list_price {
+      font-size: 36rpx;
+      color: rgb(255, 0, 0);
+}
+
+.list_time {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: rgb(129, 129, 129);
+}
+
+.nocontent {
+      width: 100%;
+      height: calc(100% - 400rpx);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-sizing: border-box;
+}
+
+.nocontent image {
+      padding-left: 80rpx;
+      width: 340rpx;
+      height: 272rpx;
+}
+
+.blank_text {
+      padding-top: 40rpx;
+      font-size: 32rpx;
+      letter-spacing: 2rpx;
+      color: #c6c6c8;
+}
+
+.fixed {
+      position: fixed;
+      left: 0rpx;
+      top: 0rpx;
+}
+
+.nofixed {
+      height: 91rpx;
+      width: 100%;
+      background: #fff;
+}

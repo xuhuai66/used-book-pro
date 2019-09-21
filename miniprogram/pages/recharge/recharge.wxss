@@ -1,0 +1,80 @@
+.contain{
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      padding: 30rpx;
+      flex-direction: column;
+}
+.card{
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      padding: 40rpx;
+      box-shadow: 0 0 20rpx #eeeeee;
+      border-radius: 10rpx;
+      flex-direction: column;
+}
+.b1{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90rpx;
+      width: 100%;
+      border-bottom: 1rpx solid #eeeeee;
+}
+.c1{
+      font-size: 28rpx;
+      letter-spacing: 3rpx;
+        color: #b2b2b2;
+}
+.c2{
+      font-size: 28rpx;
+      letter-spacing: 3rpx;
+}
+
+.b2{
+      display: flex;
+     flex-direction: column;
+      justify-content: space-between;
+      padding: 20rpx 0rpx;
+      height: 150rpx;
+      width: 100%;
+      border-bottom: 1rpx solid #eeeeee;
+}
+.d1{
+      font-size: 28rpx;
+      letter-spacing: 3rpx;
+      color: #b2b2b2;
+}
+.d2{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+}
+.d2 view{
+      width: 10%;
+      font-size: 40rpx;
+}
+.d2 input{
+      width: 90%;
+      height: 70rpx;
+      line-height: 70rpx;
+      font-size:60rpx;
+      letter-spacing: 4rpx;
+}
+.confirm{
+      width: 100%;
+      height:80rpx;
+      background: #fbbd08;
+      border-radius: 10rpx;
+      margin-top: 90rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 4rpx;
+      color: #ffffff;
+}
+.blank{
+       color: #b2b2b2;
+}

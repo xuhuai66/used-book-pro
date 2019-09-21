@@ -1,0 +1,30 @@
+<view class="top_contain">
+      <view class="des_contain">
+            <view class="name">许坏</view>
+            <view class="sign">低调做人，高调做事</view>
+      </view>
+      <view class="avator_box">
+            <image class="avator" src="/images/tou.png"></image>
+      </view>
+</view>
+<view class="contain">
+      <view class="title">程序简介</view>
+      <view class="description">
+            <text space="emsp" decode="{{ true }}">{{des}}</text>
+      </view>
+      <view class="title">联系方式</view>
+      <view class="description">
+            <view class="tip" bindtap="copy" data-copy="https://github.com/xuhuai66" data-name="链接">
+                  <view>Github</view>:
+                  <text>https://github.com/xuhuai66</text>
+            </view>
+            <view class="tip" bindtap="copy" data-copy="xuhuai66" data-name="微信">
+                  <view>Wechat</view>:
+                  <text>xuhuai66</text>
+            </view>
+            <view class="tip" bindtap="copy" data-copy="1604026596" data-name="QQ">
+                  <view>QQ</view>:
+                  <text>1604026596</text>
+            </view>
+      </view>
+</view>

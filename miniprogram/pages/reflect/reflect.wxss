@@ -1,0 +1,93 @@
+.contain {
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      padding: 30rpx;
+      flex-direction: column;
+}
+
+.card {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      padding: 40rpx 40rpx;
+      box-shadow: 0 0 20rpx #eee;
+      border-radius: 20rpx;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 240rpx;
+      background: linear-gradient(to bottom right, #fbbd08, #ffee04);
+}
+
+.title {
+      font-size: 28rpx;
+      letter-spacing: 4rpx;
+      color: #fff;
+}
+
+.num {
+      font-size: 60rpx;
+      color: #fff;
+      letter-spacing: 4rpx;
+}
+
+.list {
+      margin-top: 80rpx;
+      width: 100%;
+      border-bottom: 1rpx solid #eee;
+      padding-bottom: 20rpx;
+}
+
+.list view {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #fbbd08;
+}
+
+.list input {
+      margin-top: 40rpx;
+      width: 100%;
+      padding: 0 40rpx;
+      font-size: 28rpx;
+      height: 40rpx;
+      line-height: 40rpx;
+}
+
+.confirm {
+      margin-top: 80rpx;
+      background: #fbbd08;
+      border-radius: 20rpx;
+      color: #fff;
+      width: 100%;
+      height: 80rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30rpx;
+      letter-spacing: 24rpx;
+      box-shadow: 0 0 20rpx #eee;
+}
+.tips{
+      width: 100%;
+      margin-top: 40rpx;
+}
+.t1{
+      font-size: 30rpx;
+      line-height: 45rpx;
+      letter-spacing: 3rpx;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20rpx;
+}
+.t1 image{
+      width: 30rpx;
+      height: 30rpx;
+      padding-right: 20rpx;
+}
+.t2{
+      font-size: 28rpx;
+      line-height: 45rpx;
+      margin-top: 20rpx;
+      letter-spacing: 3rpx;
+      color:#b2b2b2;
+}

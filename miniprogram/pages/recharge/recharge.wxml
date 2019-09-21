@@ -1,0 +1,17 @@
+<view class="contain">
+      <view class="card">
+            <view class="b1">
+                  <view class="c1">充值方式</view>
+                  <view class="c2">微信</view>
+            </view>
+            <view class="b2">
+                  <view class="d1">充值金额</view>
+                  <view class="d2">
+                        <view>￥</view>
+                        <input type="number" bindinput="numInput" placeholder-class="blank" placeholder="0.00" value="{{num}}"></input>
+                  </view>
+
+            </view>
+      </view>
+      <view class="confirm" bindtap="paypost">确认充值</view>
+</view>

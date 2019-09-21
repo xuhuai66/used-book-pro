@@ -1,0 +1,57 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<wxs module="tsUtil">
+// 判断子项是否被选中
+function isArray (array) {
+  return array instanceof Array;
+}
+function isActive (activeList, itemId) {
+  if (typeof activeList === 'undefined' || activeList == null) return false;
+  if (isArray(activeList)) {
+    return activeList.indexOf(itemId) > -1;
+  }
+  else {
+    return activeList === itemId;
+  }
+}
+
+module.exports.isActive = isActive;
+</wxs>
+
+<view
+  class="van-tree-select"
+  style="height: {{ mainHeight }}px"
+>
+  <scroll-view scroll-y class="van-tree-select__nav">
+    <view
+      wx:for="{{ items }}"
+      wx:key="index"
+      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === index, disabled: item.disabled }) }} {{ mainActiveIndex === index ? 'main-active-class' : '' }} {{ item.disabled ? 'main-disabled-class' : '' }}"
+      data-index="{{ index }}"
+      bind:tap="onClickNav"
+    >
+      {{ item.text }}
+    </view>
+  </scroll-view>
+  <scroll-view
+    scroll-y
+    class="van-tree-select__content"
+    style="height: {{ itemHeight }}px"
+  >
+    <view
+      wx:for="{{ subItems }}"
+      wx:key="id"
+      class="van-ellipsis van-hairline--bottom content-item-class {{ utils.bem('tree-select__item', { active: tsUtil.isActive(activeId, item.id), disabled: item.disabled }) }} {{ tsUtil.isActive(activeId, item.id) ? 'content-active-class' : '' }} {{ item.disabled ? 'content-disabled-class' : '' }}"
+      data-item="{{ item }}"
+      bind:tap="onSelectItem"
+    >
+      {{ item.text }}
+      <van-icon
+        wx:if="{{ tsUtil.isActive(activeId, item.id) }}"
+        name="checked"
+        size="16px"
+        class="van-tree-select__selected"
+      />
+    </view>
+  </scroll-view>
+</view>

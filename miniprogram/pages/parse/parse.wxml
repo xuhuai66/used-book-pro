@@ -1,0 +1,47 @@
+<wxs src="../../common.wxs" module="morejs" />
+<view class="contain">
+      <view class="card">
+            <view class="box1">
+                  <view class="box1_1">
+                        <view class="box_1_1">余额</view>
+                        <view class="box_1_2">{{num}}.00</view>
+                  </view>
+                  <view class="box1_2">单位（元）</view>
+            </view>
+            <view class="box2">
+                  <view class="box2_1">
+                        <view class="box2_1_1" catchtap="go" data-go="/pages/recharge/recharge">充值</view>
+                        <view class="box2_1_2" catchtap="go" data-go="/pages/reflect/reflect">提现</view>
+                  </view>
+            </view>
+      </view>
+</view>
+
+<view class="listContain">
+      <view class="title">--交易明细--</view>
+      <block wx:for="{{list}}" wx:key="_id">
+            <view class="list">
+                  <view class="list_1">
+                        <view class="list_1_1">{{item.name}}</view>
+                        <view class="list_1_2">{{morejs.format(item.stamp)}}</view>
+                  </view>
+                  <view class="list_2 {{item.type==1?'green':'red'}}">{{item.type==1?'+':'-'}}{{item.num}} 元</view>
+            </view>
+      </block>
+</view>
+<block wx:if="{{list.length>20}}">
+      <import src="/common.wxml" />
+      <template is="loadmore" data="{{nomore}}" />
+</block>
+<van-transition show="{{ scrollTop>500 }}" custom-class="block" duration="600">
+      <view class="totop" bindtap="gotop">
+            <image src="/images/top.png"></image>
+      </view>
+</van-transition>
+
+
+<!--无内容显示-->
+<view class="nocontent" wx:if="{{list.length==0}}">
+      <image src="/images/blank.png"></image>
+      <view class="blank_text">这里空空如也~</view>
+</view>

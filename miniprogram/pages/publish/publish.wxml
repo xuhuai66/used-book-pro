@@ -1,0 +1,115 @@
+<view class="top_steps">
+      <van-steps steps="{{ steps }}" active="{{ active }}" active-color="#000000" />
+</view>
+<view style="height:66.8px"></view>
+
+<!--步骤一-->
+<van-transition show="{{ show_a }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <view class="a_contain">
+            <view class="a_inp shadow">
+                  <image class="a_scan" src="/images/scan.png"></image>
+                  <input bindconfirm="confirm" bindinput="isbnInput" value="{{isbn}}" type="number" maxlength="13" placeholder-class="a_pla" placeholder="请输入书本的ISBN号码" />
+                  <view class="a_confirm" bindtap="confirm">确认</view>
+            </view>
+            <image class="a_isbn" src="/images/isbn.jpg" />
+            <view class="a_des">您还可以直接通过摄像头扫描出ISBN码</view>
+            <image class="a_next" src="/images/next.png" />
+      </view>
+      <view class="a_sao">
+            <button class="shadow" bindtap="scan">点击扫码</button>
+      </view>
+</van-transition>
+<!--步骤二-->
+<van-transition show="{{ show_b }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <view class="b_contain">
+            <view class="b_top">
+                  <view class="b_poster">
+                        <image src="{{bookinfo.pic}}" />
+                  </view>
+                  <view class="b_content">
+                        <view class="b_title text-cut">{{bookinfo.title}}</view>
+                        <view class="b_dcontain">
+                              <view class="b_author text-cut">{{bookinfo.author}}</view>
+                              <view class="b_price">￥{{bookinfo.price}}元</view>
+                        </view>
+                        <view class="b_des">{{bookinfo.summary}}
+                        </view>
+                  </view>
+            </view>
+      </view>
+      <view class="b_ccontain">
+            <view class="b_card">
+                  <view class="b_bar">
+                        <view class="b_name">价格(元)</view>
+                        <van-stepper value="{{price}}" integer bind:change="priceChange" min="1" max="100" />
+                  </view>
+                  <view class="b_border"></view>
+                  <view class="b_bar">
+                        <view class="b_name">类别</view>
+                        <radio-group class="kind-group" bindchange="kindChange">
+                              <label class="b_radio" wx:for="{{kind}}" wx:key="id">
+                                    <radio color="#fbbd08" value="{{item.id}}" checked="{{item.check}}" />{{item.name}}
+                              </label>
+                        </radio-group>
+                  </view>
+                  <!--选择专业书时候-->
+                  <block wx:if="{{chooseCollege}}">
+                        <view class="b_border"></view>
+                        <view class="b_bar">
+                              <view class="b_name">选择学院</view>
+                              <picker range="{{college}}" range-key="name" value="{{cids}}" bindchange="choCollege">
+                                    <view class="b_picker">
+                                          <block wx:if="{{cids!==-1}}">当前选择：{{college[cids].name}}</block>
+                                          <block wx:if="{{cids==-1}}">请选择专业</block>
+                                          <image class="right" src="/images/right.png" />
+                                    </view>
+                              </picker>
+                        </view>
+                  </block>
+                  <view class="b_border"></view>
+                  <view class="b_bar">
+                        <view class="name">取货方式</view>
+                        <radio-group class="kind-group" bindchange="delChange">
+                              <label class="b_radio" wx:for="{{delivery}}" wx:key="id">
+                                    <radio color="#fbbd08" value="{{item.id}}" checked="{{item.check}}" />{{item.name}}
+                              </label>
+                        </radio-group>
+                  </view>
+                  <block wx:if="{{chooseDelivery==0}}">
+                        <view class="b_place">
+                              <view class="b_plecebox">
+                                    <input maxlength="20" placeholder="请输入您的详细地址" value="{{place}}" bindinput="placeInput" />
+                              </view>
+                        </view>
+                  </block>
+                  <view class="b_bar">
+                        <view class="name">备注信息</view>
+                        <view class="b_nobi">※ 非必填</view>
+                  </view>
+                  <view class="b_notes">
+                        <view class="b_text">
+                              <textarea value="{{notes}}" bindinput="noteInput" maxlength="50" placeholder="请随便说点相关的"></textarea>
+                              <view class="b_less">{{note_counts}}/50</view>
+                        </view>
+                  </view>
+                  <view class="b_bar">
+                        <view class="name">发布时长(天)</view>
+                        <van-stepper bind:change="duraChange" value="{{dura}}" min="1" max="50" />
+                  </view>
+                  <view class="b_tips">
+                        <text>* </text>此时长内您的发布信息将会展示给所有同学，超时后您只需去个人中心处擦亮即可再次展示</view>
+            </view>
+            <view class="b_publish" bindtap="check_pub">马上发布
+            </view>
+      </view>
+</van-transition>
+<!--步骤三-->
+<van-transition show="{{ show_c }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <view class="c_contain" style="height:{{systeminfo.windowHeight-66.8}}px">
+            <image class="c_success" src="/images/success.png"></image>
+            <view class="c_title">恭喜您 发布成功</view>
+            <view class="c_des">订单的实时状态将通过短信和邮箱通知您</view>
+            <view class="c_see" bindtap="detail" >查看详情</view>
+            <view class="c_again shadow" bindtap="initial">再来一本</view>
+      </view>
+</van-transition>

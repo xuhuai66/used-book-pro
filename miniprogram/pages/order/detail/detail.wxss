@@ -1,0 +1,178 @@
+page {
+      background: #fbbd08;
+}
+
+.contain {
+      display: flex;
+      padding: 20rpx 28rpx;
+      width: 100%;
+      box-sizing: border-box;
+}
+
+.card {
+      width: 100%;
+      background: #fff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 40rpx 25rpx;
+}
+
+.top_over {
+      width: 100%;
+      height: 20rpx;
+      position: absolute;
+      left: 0rpx;
+      top: -10rpx;
+}
+
+.bot_over {
+      width: 100%;
+      height: 20rpx;
+      position: absolute;
+      left: 0rpx;
+      bottom: -10rpx;
+}
+
+.goods_box {
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      height: 100rpx;
+}
+
+.goods_img {
+      width: 90rpx;
+      height: 90rpx;
+}
+
+.goods_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 20rpx;
+      width: calc(100% - 240rpx);
+      height: 90%;
+}
+
+.goods_title {
+      font-size: 29rpx;
+      letter-spacing: 3rpx;
+}
+
+.goods_author {
+      font-size: 26rpx;
+      letter-spacing: 2rpx;
+      color: rgb(150, 150, 150);
+}
+
+.goods_price {
+      width: 150rpx;
+      height: 100%;
+      font-size: 32rpx;
+      color: #f00;
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.border {
+      width: 100%;
+      height: 20rpx;
+      border-bottom: 1rpx solid #eee;
+}
+
+.list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 30rpx 0 10rpx 0;
+}
+
+.list_1 {
+      font-size: 26rpx;
+      color: rgb(167, 167, 167);
+      letter-spacing: 2rpx;
+}
+
+.list_2 {
+      padding-top: 10rpx;
+      font-size: 32rpx;
+      letter-spacing: 3rpx;
+}
+
+.orderfare {
+      margin-top: 28rpx;
+      font-size: 22rpx;
+      font-weight: 600;
+      letter-spacing: 2rpx;
+      color: rgb(167, 167, 167);
+      padding-bottom: 20rpx;
+}
+
+.fare_box {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10rpx 0;
+}
+
+.fare_title {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+}
+
+.fare_des {
+      font-size: 27rpx;
+      color: rgb(167, 167, 167);
+}
+.bot_box{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.cancel {
+      font-size: 30rpx;
+      width: 620rpx;
+      height: 80rpx;
+      background: #000;
+      color: #fff;
+      border-radius: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40rpx;
+       letter-spacing: 4rpx;
+}
+
+.contact {
+      font-size: 30rpx;
+      width: 620rpx;
+      height: 80rpx;
+      background: #fbbd08;
+      color: #000;
+      border-radius: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20rpx;
+      letter-spacing: 4rpx;
+}
+.delete{
+      font-size: 30rpx;
+      width: 620rpx;
+      height: 80rpx;
+      background: #adadad;
+      color: #fff;
+      border-radius: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20rpx;
+      letter-spacing: 4rpx;
+}

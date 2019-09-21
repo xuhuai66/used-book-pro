@@ -1,0 +1,55 @@
+import { VantComponent } from '../common/component';
+import { safeArea } from '../mixins/safe-area';
+VantComponent({
+    mixins: [safeArea()],
+    classes: [
+        'bar-class',
+        'price-class',
+        'button-class'
+    ],
+    props: {
+        tip: {
+            type: null,
+            observer: 'updateTip'
+        },
+        tipIcon: String,
+        type: Number,
+        price: {
+            type: null,
+            observer: 'updatePrice'
+        },
+        label: String,
+        loading: Boolean,
+        disabled: Boolean,
+        buttonText: String,
+        currency: {
+            type: String,
+            value: '¥'
+        },
+        buttonType: {
+            type: String,
+            value: 'danger'
+        },
+        decimalLength: {
+            type: Number,
+            value: 2,
+            observer: 'updatePrice'
+        },
+        suffixLabel: String
+    },
+    methods: {
+        updatePrice() {
+            const { price, decimalLength } = this.data;
+            this.set({
+                hasPrice: typeof price === 'number',
+                priceStr: (price / 100).toFixed(decimalLength)
+            });
+        },
+        updateTip() {
+            this.set({ hasTip: typeof this.data.tip === 'string' });
+        },
+        onSubmit(event) {
+            this.$emit('submit', event.detail);
+        }
+    }
+});

@@ -1,0 +1,18 @@
+{
+  "author": "Jeff Guo <gwjjeff@gmail.com>",
+  "name": "cryptojs",
+  "tags": ["Hash", "MD5", "SHA1", "SHA-1", "SHA256", "SHA-256", "RC4", "Rabbit", "AES", "DES", "PBKDF2", "HMAC", "OFB", "CFB", "CTR", "CBC", "Base64"],
+  "description": "Following googlecode project crypto-js, provide standard and secure cryptographic algorithms for NodeJS. Support MD5, SHA-1, SHA-256, RC4, Rabbit, AES, DES, PBKDF2, HMAC, OFB, CFB, CTR, CBC, Base64",
+  "version": "2.5.3",
+  "homepage": "https://github.com/gwjjeff/cryptojs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gwjjeff/cryptojs.git"
+  },
+  "main": "cryptojs.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

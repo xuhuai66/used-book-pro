@@ -1,0 +1,26 @@
+<view class="contain" >
+      <view class="contains" wx:for="{{list}}" wx:key="id">
+            <view class="top" bindtap="show" data-show="{{item}}">
+                  <view class="title">{{item.id+1}}.{{item.title}}</view>
+                  <image wx:if="{{item.check}}" class="ico" src="/images/on.png"></image>
+                  <image wx:if="{{!item.check}}" class="ico" src="/images/off.png"></image>
+            </view>
+            <view class="descontain" hidden="{{!item.check}}">
+                  <block wx:for="{{item.des}}" wx:key="*this">
+                        <view class="destext">{{item}} </view>
+                  </block>
+            </view>
+      </view>
+</view>
+<view style="height:100rpx;"></view>
+<view class="bottom">
+      <button bindtap="go" data-go="/pages/kefu/kefu">
+            <image style="width:40rpx;height:40rpx;" src="/images/kefu.png" />
+            <view class="btxt">联系客服</view>
+      </button>
+      <view class="center"></view>
+      <button open-type="feedback">
+            <image style="width:40rpx;height:40rpx;" src="/images/feedback.png" />
+            <view class="btxt">问题反馈</view>
+      </button>
+</view>

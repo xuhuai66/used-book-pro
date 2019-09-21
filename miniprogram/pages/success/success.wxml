@@ -1,0 +1,27 @@
+<view class="contain">
+        <image class="successimg" src="/images/suc.png"></image>
+        <view class="successtext">订单支付成功</view>
+        <view class="card"  style="margin-top:30rpx">
+                  <view class="card_title">购买书名：</view>
+                  <view class="card_des">{{detail.bookinfo.title}}</view>
+        </view>
+        <view class="card">
+                  <view class="card_title">实付金额：</view>
+                  <view class="card_des price" >{{detail.price}}.00元</view>
+        </view>
+        <view class="card">
+                  <view class="card_title">创建时间：</view>
+                  <view class="card_des">{{creatTime}}</view>
+        </view>
+        <view class="border"></view>
+         <view class="card">
+                  <view class="card_title">交易方式：</view>
+                  <view class="card_des">{{detail.deliveryid==0?'自提':'帮送'}}</view>
+        </view>
+         <view class="card">
+                  <view class="card_title">{{detail.deliveryid==0?'取货':'收货'}}地址：</view>
+                  <view class="card_des">{{detail.deliveryid==0?detail.ztplace:detail.psplace}}</view>
+        </view>
+       <view class="bot_see" bindtap="godetail">订单列表</view>
+       <view class="bot_back" bindtap="home">返回首页</view>
+</view>

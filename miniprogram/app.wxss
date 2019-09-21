@@ -1,0 +1,45 @@
+page {
+      background: #fff;
+      width: 100%;
+      height: 100%;
+}
+
+.shadow {
+      box-shadow: 0 0 18rpx rgb(236, 236, 236);
+}
+
+.text-cut {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+}
+
+.loadmore {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30rpx 0;
+}
+
+.loadmore image {
+      width: 50rpx;
+      height: 50rpx;
+}
+
+.loadmore view {
+      font-size: 28rpx;
+      color: #b2b2b2;
+      letter-spacing: 4rpx;
+}
+.totop {
+      position: fixed;
+      right: 30rpx;
+      bottom: 80rpx;
+}
+
+.totop image {
+      width: 100rpx;
+      height: 100rpx;
+      z-index: 9;
+}

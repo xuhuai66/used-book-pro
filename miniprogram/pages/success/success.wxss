@@ -1,0 +1,77 @@
+.contain {
+      width: 100%;
+      padding: 50rpx 30rpx 0rpx 30rpx;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+}
+
+.successimg {
+      width: 150rpx;
+      height: 150rpx;
+}
+
+.successtext {
+      font-size: 32rpx;
+      letter-spacing: 2rpx;
+      margin-top: 20rpx;
+}
+
+.card {
+      padding-top: 30rpx;
+      width: 100%;
+      display: flex;
+}
+
+.card_title {
+      width: 25%;
+      font-size: 28rpx;
+      color: #686868;
+      letter-spacing: 3rpx;
+}
+
+.card_des {
+      width: 75%;
+      font-size: 28rpx;
+      letter-spacing: 3rpx;
+      color: #686868;
+}
+
+.price {
+      color: rgb(255, 22, 22);
+}
+
+.border {
+      width: 100%;
+      margin-top: 30rpx;
+      border-bottom: 1rpx solid #eee;
+}
+
+.bot_see {
+      margin-top: 100rpx;
+      width: 600rpx;
+      height: 90rpx;
+      border-radius: 45rpx;
+      border: 1rpx solid #d1d1d1;
+      font-size: 30rpx;
+      color: #686868;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 4rpx;
+}
+
+.bot_back {
+      margin-top: 40rpx;
+      width: 600rpx;
+      height: 90rpx;
+      border-radius: 45rpx;
+      background: #fbbd08;
+      font-size: 30rpx;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 4rpx;
+}

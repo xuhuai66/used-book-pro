@@ -1,0 +1,7 @@
+<view class="contain">
+     <view class="go">
+             <view  bindtap="go">跳过{{count}}s</view> 
+     </view>
+     <image class="bg" src="{{bgurl}}"></image>
+    
+</view>

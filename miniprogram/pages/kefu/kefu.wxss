@@ -1,0 +1,84 @@
+.contain{
+    width: 100%;
+    padding: 0 46rpx;
+    box-sizing: border-box;
+}
+.slide-image{
+    width: 100%;
+    height: 310rpx;
+    border-radius: 20rpx;
+}
+.card{
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+    width: 100%;
+    height: 162rpx;
+    box-sizing: border-box;
+    box-shadow: 0 0 20rpx #eee;
+    display: flex;
+    position: relative;
+}
+.card button{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0rpx;
+      top: 0rpx;
+      opacity: 0.01;
+}
+.card1{
+    width: 140rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wechatimg{
+    width: 90rpx;
+    height:90rpx;
+}
+.borderbox{
+    width: 10rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.border{
+    width: 4rpx;
+    height: 82rpx;
+    border-left: 3rpx solid #eee;
+    box-sizing: border-box;
+}
+
+.centercontain{
+    width: 420rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     padding-left: 20rpx;
+}
+.name{
+    font-size: 32rpx;
+    font-weight: 600;
+    letter-spacing: 2rpx;
+}
+.des{
+    padding-top: 10rpx;
+    font-size: 28rpx;
+    color: rgb(161, 161, 161);
+     letter-spacing: 2rpx;
+}
+.rightico{
+    width: 40rpx;
+    height: 100%;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightimg{
+    width: 30rpx;
+    height: 30rpx;
+}

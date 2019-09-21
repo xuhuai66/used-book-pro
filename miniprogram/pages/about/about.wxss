@@ -1,0 +1,109 @@
+page {
+      background: #eee;
+}
+
+.top_contain {
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      padding: 20rpx 36rpx 30rpx 0;
+      background: #fbbd08;
+      position: relative;
+      justify-content: flex-end;
+}
+
+.des_contain {
+      width: 618rpx;
+      height: 157rpx;
+      border-radius: 10rpx;
+      background: #fff;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 0 90rpx;
+}
+
+.name {
+      font-size: 36rpx;
+      line-height: 50rpx;
+}
+
+.sign {
+      margin-top: 10rpx;
+      font-size: 28rpx;
+      letter-spacing: 3rpx;
+      line-height: 45rpx;
+      color: #b8b8b8;
+}
+
+.avator_box {
+      position: absolute;
+      left: 0rpx;
+      top: 0rpx;
+      display: flex;
+      padding: 44rpx 0 0 40rpx;
+}
+
+.avator {
+      box-shadow: 0 0 10rpx #b8b8b8;
+      width: 110rpx;
+      height: 110rpx;
+      border-radius: 20rpx;
+}
+
+.contain {
+      width: 100%;
+      background: #eee;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20rpx;
+      box-sizing: border-box;
+}
+
+.title {
+      margin-top: 20rpx;
+      line-height: 56rpx;
+      padding-left: 20rpx;
+      font-size: 32rpx;
+      letter-spacing: 3rpx;
+      color: #000;
+}
+
+.description {
+      width: 100%;
+      padding: 24rpx 30rpx;
+      background: #fff;
+      border-radius: 10rpx;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+}
+
+.description text {
+      width: 100%;
+      font-size: 28rpx;
+      line-height: 44rpx;
+      letter-spacing: 3rpx;
+}
+
+.tip {
+      display: flex;
+      align-items: center;
+}
+
+.tip view {
+      font-size: 30rpx;
+      letter-spacing: 2rpx;
+      padding: 15rpx 0;
+      width: 150rpx;
+      display: flex;
+      justify-content: space-between;
+}
+
+.tip text {
+      margin-left:20rpx;
+      font-size: 28rpx;
+      color: #008ecf;
+      text-decoration-line: underline;
+}

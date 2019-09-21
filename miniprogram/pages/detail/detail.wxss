@@ -1,0 +1,347 @@
+.top_contain {
+      display: flex;
+      flex-direction: column;
+      padding: 24rpx;
+      box-sizing: border-box;
+}
+
+.top_img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+
+.top_img image {
+      width: 300rpx;
+      height: 300rpx;
+}
+
+.title {
+      padding-top: 30rpx;
+      font-size: 32rpx;
+      font-weight: 600;
+      letter-spacing: 2rpx;
+}
+
+.author {
+      padding-top: 10rpx;
+      font-size: 26rpx;
+      color: rgb(172, 171, 171);
+      letter-spacing: 2rpx;
+}
+
+.price_box {
+      margin-top: 20rpx;
+      display: flex;
+      align-items: flex-end;
+}
+
+.now_price {
+      font-size: 34rpx;
+      color: rgb(255, 1, 1);
+}
+
+.pre_price {
+      padding-left: 30rpx;
+      font-size: 28rpx;
+      color: rgb(172, 171, 171);
+      text-decoration: line-through;
+}
+
+.blank {
+      width: 100%;
+      height: 24rpx;
+      background: #eee;
+}
+
+.center_contain {
+      width: 100%;
+      height: 80rpx;
+      display: flex;
+      box-sizing: border-box;
+      padding: 0 100rpx;
+      justify-content: space-around;
+}
+
+.c_title {
+      font-size: 30rpx;
+      width: 140rpx;
+      height: 100%;
+      display: flex;
+      letter-spacing: 2rpx;
+      align-items: center;
+      justify-content: center;
+}
+
+.title_on {
+      font-size: 32rpx;
+      font-weight: 600;
+      color: #000;
+      border-bottom: 4rpx solid #fbbd08;
+}
+
+.user_box {
+      width: 100%;
+      height: 148rpx;
+      display: flex;
+      padding: 24rpx;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+}
+
+.user_box image {
+      width: 100rpx;
+      height: 100rpx;
+      border-radius: 50%;
+}
+
+.des_box {
+      height: 100%;
+      width: 450rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: 10rpx 0;
+}
+
+.user_name {
+      font-size: 32rpx;
+      letter-spacing: 2rpx;
+}
+
+.local_box {
+      display: flex;
+      align-items: center;
+}
+
+.local_box image {
+      width: 30rpx;
+      height: 30rpx;
+}
+
+.local_box view {
+      padding-left: 5rpx;
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: rgb(150, 150, 150);
+}
+
+.sex {
+      width: 100rpx;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.sex image {
+      width: 50rpx;
+      height: 50rpx;
+      border-radius:50%;
+}
+
+.notes_box {
+      width: 100%;
+      padding: 24rpx 24rpx 0 24rpx;
+      display: flex;
+      box-sizing: border-box;
+}
+
+.notes {
+      width: 100%;
+      background: rgb(238, 238, 238);
+      color: #aaa;
+      padding: 20rpx 20rpx 10rpx 20rpx;
+      border-radius: 10rpx;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+}
+
+.notes_text {
+      letter-spacing: 2rpx;
+      font-size: 28rpx;
+      line-height: 45rpx;
+      padding-bottom: 10rpx;
+}
+
+.time_box {
+      width: 100%;
+      padding: 24rpx 24rpx 0 24rpx;
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+}
+
+.kind {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+}
+
+.time {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #8c9aa8;
+}
+
+.deliver_box {
+      width: 100%;
+      padding: 24rpx 24rpx 0 24rpx;
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+}
+
+.deliver_first {
+      display: flex;
+      align-items: center;
+}
+
+.deliver_title {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+}
+
+.deliver_kind {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #a5a5a5;
+}
+
+.deliver_place {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+}
+
+.palceInput_box {
+      width: 100%;
+      padding: 24rpx 24rpx 0 24rpx;
+      display: flex;
+      box-sizing: border-box;
+      justify-content: center;
+}
+
+.palceInput_box input {
+      width: 100%;
+      height: 66rpx;
+      border: 1rpx solid #eee;
+      border-radius: 10rpx;
+      font-size: 26rpx;
+      padding: 0 20rpx;
+      letter-spacing: 2rpx;
+}
+
+.detail_contain {
+      width: 100%;
+      padding: 24rpx;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+}
+
+.detail_card {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 30rpx 0;
+      justify-content: space-between;
+}
+
+.detail_border {
+      border-bottom: 1rpx solid #eee;
+}
+
+.detail_title {
+      width: 20%;
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      line-height: 45rpx;
+}
+
+.detail_content {
+      width: 78%;
+      font-size: 27rpx;
+      letter-spacing: 2rpx;
+      line-height: 44rpx;
+      color: #616161;
+}
+
+/*底部导航*/
+
+.tabbar {
+      width: 100%;
+      height: 96rpx;
+      background: #fff;
+      opacity: 1;
+      position: fixed;
+      left: 0rpx;
+      bottom: 0rpx;
+      display: flex;
+      padding: 10rpx;
+      border-top: 1rpx solid #eee;
+      align-items: center;
+      box-sizing: border-box;
+      z-index: 8;
+}
+
+.t_card {
+      position: relative;
+      width: 20%;
+      height: 80rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+}
+
+.t_card image {
+      width: 40rpx;
+      height: 40rpx;
+}
+
+.t_card text {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      height: calc(100% - 50rpx);
+      width: 100%;
+      font-size: 24rpx;
+      text-align: center;
+      white-space: nowrap;
+      padding-top: 4rpx;
+}
+
+.t_button {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0rpx;
+      top: 0rpx;
+      opacity: 0.01;
+      z-index: 9;
+}
+
+.buy_box {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+}
+
+.buy {
+      width: 90%;
+      height: 70rpx;
+      background: #fbbd08;
+      color: #000;
+      letter-spacing: 4rpx;
+      font-size: 28rpx;
+      border-radius: 35rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
