@@ -1,149 +1,151 @@
-# ��ӭʹ�ã����������ý̳�
-## �ͷ�����һ����ʱ�䣬�������Ͻǵ�star
-### ��������ȫ��Դ��˵����ַ��
+# 欢迎使用，下面是配置教程
+## 劳烦您花一秒钟时间，戳戳右上角的star
+### 本程序完全开源，说明地址：
 #### [https://mp.weixin.qq.com/s/e93APJGBrqbGNBiLuqKaxQ](https://mp.weixin.qq.com/s/e93APJGBrqbGNBiLuqKaxQ "https://mp.weixin.qq.com/s/e93APJGBrqbGNBiLuqKaxQ")
 
-#### Ŀǰ�°�����Ѿ����ߣ�����Ԥ����
-![С���������ѧ�����顿](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/pyq.png "С���������ѧ�����顿")
+#### 目前新版程序已经上线，可先预览：
+![小程序【重庆大学二手书】](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/pyq.png "小程序【重庆大学二手书】")
 
-������˵������ֱ��˵��������
+长话短说，下面直接说配置流程
 
-## һ��С�����
-### 1�����ص���
-ֱ�����ص����أ�Ȼ���뿪���߹���
+## 一、小程序端
+### 1、下载导入
+直接下载到本地，然后导入开发者工具
 
-���ǽ��������Ҳ��ʹ������������
+最近墙的厉害，也可使用蓝奏云下载
 
 > [https://www.lanzous.com/i6a4lsj](https://www.lanzous.com/i6a4lsj "https://www.lanzous.com/i6a4lsj")
 
-> С���򿪷��ۺ��ĵ���ַ��[https://developers.weixin.qq.com/miniprogram/dev/framework/](https://developers.weixin.qq.com/miniprogram/dev/framework/ "https://developers.weixin.qq.com/miniprogram/dev/framework/")
+> 小程序开发综合文档地址：[https://developers.weixin.qq.com/miniprogram/dev/framework/](https://developers.weixin.qq.com/miniprogram/dev/framework/ "https://developers.weixin.qq.com/miniprogram/dev/framework/")
 
-### 2����ͨ�ƻ���
+### 2、开通云环境
 
-�����£��ⶼ�ǻ�����ֱ�ӿ��ٷ�˵����������
+不罗嗦，这都是基础，直接看官方说明操作即可
 
-> �ƿ����ٷ��ĵ�˵����[https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html "https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html")
+> 云开发官方文档说明：[https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html "https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html")
 
-### 3������ǰ��config
+### 3、配置前端config
 
-�ҵ�config.js�ļ���Ȼ������д��ע�͸���Ϊ���Լ�
+找到config.js文件，然后按照我写的注释更改为你自己
 
 ![config.js](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/1.png "config.js")
 
-### 4��ϸ���޸�
+### 4、细节修改
 
-#### ��app.json ȫ�ֶ�������
+#### ①app.json 全局顶部导航
 
 ![app.json](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/2.png "app.json")
 
-#### ��pages/help/help.js �����ĵ�
+#### ②pages/help/help.js 帮助文档
 
 ![help.js](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/3.png "help.js")
 
-#### ��images Ĭ��ͼƬ
+#### ③images 默认图片
 
 ![images](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/4.png "images")
 
 
-## �����ƺ���
+## 二、云函数
 
-### 1���޸Ļ�����Ϣ
+### 1、修改基础信息
 
-ÿ���ƺ���Ҫ�޸ĵĲ��֣��Ҷ������������˶�����ֱ�Ӹ���������ע����Ϣ�����޸ģ�����ͼ��ʾ
+每个云函数要修改的部分，我都捻出来放在了顶部，直接根据我做的注释信息进行修改，如下图所示
 
-![�ƺ���](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/5.png "�ƺ���")
+![云函数](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/5.png "云函数")
 
-#### ����˵����
+#### 补充说明：
 
-##### 1.books�ƺ�����ʹ�õ��鼮��Ϣʹ�õ��Ǽ������ݵĽӿ�
+##### 1.books云函数中使用的书籍信息使用的是极速数据的接口
 
-> �����ַ��[https://www.jisuapi.com/api/isbn/](https://www.jisuapi.com/api/isbn/ "https://www.jisuapi.com/api/isbn/")
-
-
-##### 2.email�ƺ�����ʹ�õ�Ĭ�Ϸ����ʼ���ʽΪQQ����
-
-> �����ĵ���ַ��[https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28 "https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28")
+> 详情地址：[https://www.jisuapi.com/api/isbn/](https://www.jisuapi.com/api/isbn/ "https://www.jisuapi.com/api/isbn/")
 
 
-##### 3.sms�ƺ�����ʹ�õ���Ѷ�ƶ��Žӿ�
+##### 2.email云函数中使用的默认发送邮件方式为QQ邮箱
 
-> �����ַ��[https://cloud.tencent.com/product/sms](https://cloud.tencent.com/product/sms "https://cloud.tencent.com/product/sms")
+> 开发文档地址：[https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28 "https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28")
 
-> �����ĵ���[https://cloud.tencent.com/document/product/382/34874](https://cloud.tencent.com/document/product/382/34874 "https://cloud.tencent.com/document/product/382/34874")
 
-### 2���ϴ�ȫ���ļ�
+##### 3.sms云函数中使用的腾讯云短信接口
 
-�����ύÿ���ƺ������������������Ѿ�һ���ϴ��ˣ������ٰ�������ȥ��װ��ֱ���ϴ������ļ�����
+> 申请地址：[https://cloud.tencent.com/product/sms](https://cloud.tencent.com/product/sms "https://cloud.tencent.com/product/sms")
 
-![�ƺ���](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/6.png "�ƺ���")
+> 开发文档：[https://cloud.tencent.com/document/product/382/34874](https://cloud.tencent.com/document/product/382/34874 "https://cloud.tencent.com/document/product/382/34874")
 
-## �����ƿ������ݿ�
+### 2、上传全部文件
 
-### 1���������� ����Ȩ��
+挨个提交每个云函数，其中依赖包我已经一起上传了，无需再挨个本地去安装，直接上传所有文件即可
 
-�ֱ𴴽���ͼ��ʾ�ļ��ϣ�Ȼ�����м��ϵ�Ȩ������Ϊ���пɶ�
+![云函数](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/6.png "云函数")
 
-![����](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/7.png "����")
+## 三、云开发数据库
 
-| ��������  | �洢����  |
+### 1、创建集合 设置权限
+
+分别创建下图所示的集合，然后将所有集合的权限设置为所有可读
+
+![集合](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/7.png "集合")
+
+| 集合名称  | 存储内容  |
 | ------------ | ------------ |
-|  banner | ��ҳ�ֲ�  |
-| books  | �鼮��Ϣ  |
-| history  | Ǯ����֧��¼  |
-|  order |  ������Ϣ |
-| publish  |  ������Ϣ |
-|  start | ����ҳͼ  |
-|  times | ���ִ���  |
-| user  |  �û����� |
+|  banner | 首页轮播  |
+| books  | 书籍信息  |
+| history  | 钱包收支记录  |
+|  order |  订单信息 |
+| publish  |  发布信息 |
+|  start | 启动页图  |
+|  times | 提现次数  |
+| user  |  用户数据 |
 
-### 2������banner
+### 2、设置banner
 
-#### ����banner����������һ����¼
+#### ①在banner集合下新增一条记录
 
-#### �ڰ�����ͼ��ʾ�����ֶ�
+#### ②按照下图所示添加字段
 
-![�ֲ�](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/8.png "�ֲ�")
+![轮播](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/8.png "轮播")
 
-�����֪��������ӣ�����ֱ�ӵ��������ɵ�json��Ȼ���޸ļ���
+如果不知道如何添加，可以直接导入我生成的json，然后修改即可
 
-> banner����ʾ����¼���ص�ַ: [http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/database_export-RMHdk59cOYBr.json](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/database_export-RMHdk59cOYBr.json "http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/database_export-RMHdk59cOYBr.json")
+> banner集合示例记录下载地址: [http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/database_export-RMHdk59cOYBr.json](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/database_export-RMHdk59cOYBr.json "http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/database_export-RMHdk59cOYBr.json")
 
-#### ����˵��
+#### 补充说明
 
-list�����µ�imgΪͼƬ��ַ��idΪΨһ�����ֶΣ�urlΪ����ֲ�����ת�ĵ�ַ�������ַ����Ϊ���С��������Ĺ��ں����»���Ϊҵ��������ַ�����û�о����ռ���
+list数组下的img为图片地址，id为唯一区分字段，url为点击轮播后跳转的地址，这个地址必须为与此小程序关联的公众号文章或者为业务域名地址，如果没有就留空即可
 
-### 3����������ҳͼƬ
+### 3、设置启动页图片
 
-#### ����start����������һ����¼
+#### ①在start集合下新增一条记录
 
-#### �ڰ�����ͼ��ʾ�����ֶ�
+#### ②按照下图所示添加字段
 
 ![start](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/9.png "start")
 
-## �ġ�����ƽ̨����
+## 四、公众平台配置
 
-### 1�����û�����Ϣ
+### 1、设置基本信息
 
-|  ���� | ����  |
+|  名称 | 配置  |
 | ------------ | ------------ |
-| ��Ŀ  | ������� > ��������/��Ʒ����  |
-| ������	  | 2.4.3|
+| 类目  | 生活服务 > 环保回收/废品回收  |
+| 基础库	  | 2.4.3|
 
-### 2���ύ���
+### 2、提交审核
 
-���ҳ��·����pages/start/start
+审核页面路径：pages/start/start
 
-### 3���������߿ͷ�
+### 3、设置在线客服
 
-�򿪡����á�--���ͷ���--�����ӡ����󶨳ɹ��󣬴�С���򡾿ͷ�С���֡���״̬����Ϊ���߼��ɣ���ʱ���пͻ���ѯ�Զ������͵����΢�ź��ϵ�
+打开【设置】--【客服】--【添加】，绑定成功后，打开小程序【客服小助手】，状态设置为在线即可，到时候有客户咨询自动会推送到你的微信号上的
 
-![�ͷ�](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/10.png "�ͷ�")
+![客服](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/10.png "客服")
 
-## ����������
+## ~~待发布内容~~
 
-#### ��Ϊ����̫���У�ĿǰС������δ����Ŀǰ���������ߣ����������û����������⣬�ȶ����ټ��ϣ�������Ӱ��Ŀǰ����ʹ�ã�Ԥ��9.22�������ֹ��ܡ�
+#### ~~因为提现太敏感，目前小程序内未部署，目前程序已上线，等这两天用户反馈的问题，稳定后再加上，并不会影响目前上线使用，预计9.22添加提现功能。~~
 
-## �����뷴��
+#### 提现功能已发布 2019.9.21
 
-#### С�������б�����ϸ����ϵ��ʽ�������⼰ʱ����
-#### �����Ҫ�ṩ��װ����ֱ����ϵ��΢�ţ�xuhuai66
+## 服务与反馈
+
+#### 小程序内有本人详细的联系方式，有问题及时反馈
+#### 如果需要提供安装服务，直接联系我微信：xuhuai66
