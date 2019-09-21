@@ -145,6 +145,8 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 #### 提现功能已发布 2019.9.21
 
+> [https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ](https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ "https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ")
+
 ## 服务与反馈
 
 #### 小程序内有本人详细的联系方式，有问题及时反馈
