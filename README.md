@@ -14,7 +14,7 @@
 
 最近墙的厉害，也可使用蓝奏云下载
 
-> [https://www.lanzous.com/i6a4lsj](https://www.lanzous.com/i6a4lsj "https://www.lanzous.com/i6a4lsj")
+> [https://www.lanzous.com/i6ay9pe](https://www.lanzous.com/i6ay9pe "https://www.lanzous.com/i6ay9pe")
 
 > 小程序开发综合文档地址：[https://developers.weixin.qq.com/miniprogram/dev/framework/](https://developers.weixin.qq.com/miniprogram/dev/framework/ "https://developers.weixin.qq.com/miniprogram/dev/framework/")
 
