@@ -5,6 +5,7 @@ const config = {
       partnerKey: '1111111111111111111111', //此处填服务商密钥
       pfx: '', //证书初始化
       fileID: 'cloud://zf-shcud.11111111111111111/apiclient_cert.p12' //证书云存储id
+      actionName:'重庆大学二手书小程序提现'
 };
 
 /*
@@ -14,7 +15,6 @@ const config = {
 用
 管
 */
-
 const cloud = require('wx-server-sdk')
 cloud.init({
       env: config.envName
@@ -22,26 +22,30 @@ cloud.init({
 const db = cloud.database();
 const tenpay = require('tenpay'); //支付核心模块
 exports.main = async(event, context) => {
+
+      let userInfo = (await db.collection('user').doc(event.userid).get()).data;
+      if (parseInt(userInfo.parse)<=parseInt(event.num)){
+            return 0;
+      }
       //首先获取证书文件
-      const res = await cloud.downloadFile({
+     let fileres = await cloud.downloadFile({
             fileID: config.fileID,
       })
-      config.pfx = res.fileContent
+      config.pfx = fileres.fileContent
       let pay = new tenpay(config,true)
       let result = await pay.transfers({
-            //这部分参数含义参考https://pay.weixin.qq.com/wiki/doc/api/tools/mch_pay.php?chapter=14_2
             partner_trade_no: 'bookreflect' + Date.now() + event.num,
-            openid: event.userinfo._openid,
+            openid: userInfo._openid,
             check_name: 'NO_CHECK',
-            amount: parseInt(event.num) * 100,
-            desc: '二手书小程序提现',
+            amount: parseInt(event.num) * 10,
+            desc: config.actionName,
       });
       if (result.result_code == 'SUCCESS') {
-            //如果提现成功后的操作
+            //成功后操作
             //以下是进行余额计算
-            let re=await db.collection('user').doc(event.userinfo._id).update({
+            let re=await db.collection('user').doc(event.userid).update({
                   data: {
-                        parse: event.userinfo.parse - parseInt(event.num)
+                        parse: userInfo.parse - parseInt(event.num)
                   }
             });
             return re
