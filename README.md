@@ -151,3 +151,7 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 #### 小程序内有本人详细的联系方式，有问题及时反馈
 #### 如果需要提供安装服务，直接联系我微信：xuhuai66
+#### 下面是我的小程序php开发交流圈
+
+> [https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ](https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ "https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ")
+
