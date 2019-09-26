@@ -59,7 +59,7 @@ exports.main = async (event, context) => {
                   //商户订单号
                   out_trade_no: 'bookcz' + event.num + '' + curTime,
                   body: '充值钱包',       //商品名称
-                  total_fee: parseInt(event.num),     //金额，注意是数字，不是字符串
+                   total_fee: parseInt(event.num)*100,     //金额，注意是数字，不是字符串
                   openid: wxContext.OPENID //***用户的openid
             });
             ctx.body = result;//返回前端结果
