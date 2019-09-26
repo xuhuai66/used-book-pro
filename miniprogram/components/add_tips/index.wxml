@@ -1,0 +1,29 @@
+<view class="box" wx:if="{{SHOW_TOP}}">
+  <view class='arrow'></view>
+  <view class='body' bindtap='showModal'>
+    <text>{{text}}</text>
+  </view>
+</view>
+
+<!-- modal -->
+<view class='modal' wx:if="{{SHOW_MODAL}}">
+  <view style='flex-direction: row;align-items:center;'>
+    <text>1. 点击</text>
+    <image src='./assets/fav-1.jpg' style='width:100px;height:40px;'></image>
+  </view>
+  <view>
+    <text>2. 点击「添加到我的小程序」</text>
+    <image src='./assets/fav-2.jpg' style='width:100%;height:200px;'></image>
+  </view>
+  <view>
+    <text>3. 微信首页下拉，快速进入小程序</text>
+    <image src='./assets/fav-3.jpg' style='width:100%;height:150px;'></image>
+  </view>
+
+  <!-- 知道了 -->
+  <view class='ok-btn' hover-class='btn-hover' bindtap='okHandler'>
+    <view>
+      <text>我知道了！</text>
+    </view>
+  </view>
+</view>

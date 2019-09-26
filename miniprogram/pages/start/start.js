@@ -21,17 +21,16 @@ Page({
             })
       },
       countDown: function() {
-            let t = this,
-                  n = this,
-                  e = 3;
+            let that = this;
+             let total = 3;
             this.interval = setInterval(function() {
-                  e > 0 && (e--, n.setData({
-                        count: e
-                  })), 0 === e && (n.setData({
-                        count: e
+                  total > 0 && (total--, that.setData({
+                        count: total
+                  })), 0 === total && (that.setData({
+                        count: total
                   }), wx.switchTab({
                         url: "/pages/index/index"
-                  }), clearInterval(t.interval));
+                  }), clearInterval(that.interval));
             }, 1e3);
       },
       //为了数据安全可靠，每次进入获取一次用户信息
