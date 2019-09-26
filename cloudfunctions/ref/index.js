@@ -5,7 +5,8 @@ const config = {
       partnerKey: '1111111111111111111111', //此处填服务商密钥
       pfx: '', //证书初始化
       fileID: 'cloud://zf-shcud.11111111111111111/apiclient_cert.p12' //证书云存储id
-      actionName:'重庆大学二手书小程序提现'
+      actionName:'重庆大学二手书小程序提现',
+      rate:1 //提现收取利率，1指的是每笔收取1%
 };
 
 /*
@@ -19,6 +20,7 @@ const cloud = require('wx-server-sdk')
 cloud.init({
       env: config.envName
 })
+
 const db = cloud.database();
 const tenpay = require('tenpay'); //支付核心模块
 exports.main = async(event, context) => {
@@ -37,7 +39,7 @@ exports.main = async(event, context) => {
             partner_trade_no: 'bookreflect' + Date.now() + event.num,
             openid: userInfo._openid,
             check_name: 'NO_CHECK',
-            amount: parseInt(event.num) * 10,
+            amount: parseInt(event.num) * (100 - config.rate),
             desc: config.actionName,
       });
       if (result.result_code == 'SUCCESS') {
