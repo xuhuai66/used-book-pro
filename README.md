@@ -167,5 +167,3 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 > [https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ](https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ "https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ")
 
-
-  [1]: https://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/yuncunchu.png
