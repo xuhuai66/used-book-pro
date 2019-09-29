@@ -1,8 +1,3 @@
----
-title: 二手书商城
-tags: 新建,模板,小书匠
-grammar_cjkRuby: true
----
 
 
 # 欢迎使用，下面是配置教程
