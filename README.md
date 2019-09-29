@@ -146,7 +146,7 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 ②你的云存储下载域名，如下图所示
 
-![云存储域名][1]
+![云存储下载域名](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/11.png "云存储下载域名")
 
 ### 2、提交审核
 
