@@ -1,3 +1,10 @@
+---
+title: 二手书商城
+tags: 新建,模板,小书匠
+grammar_cjkRuby: true
+---
+
+
 # 欢迎使用，下面是配置教程
 ## 劳烦您花一秒钟时间，戳戳右上角的star
 ### 本程序完全开源，说明地址：
@@ -14,7 +21,7 @@
 
 最近墙的厉害，也可使用蓝奏云下载
 
-> [https://www.lanzous.com/i6d67ah](https://www.lanzous.com/i6d67ah "https://www.lanzous.com/i6d67ah")
+> [https://www.lanzous.com/i6hd9mh](https://www.lanzous.com/i6hd9mh "https://www.lanzous.com/i6hd9mh")
 
 > 小程序开发综合文档地址：[https://developers.weixin.qq.com/miniprogram/dev/framework/](https://developers.weixin.qq.com/miniprogram/dev/framework/ "https://developers.weixin.qq.com/miniprogram/dev/framework/")
 
@@ -120,7 +127,16 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 ![start](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/9.png "start")
 
-## 四、公众平台配置
+## 四、云存储配置
+
+#### 1.提现设置
+
+> [https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ](https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ "https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ")
+
+#### 2.新建文件夹【share】，用于存放生成的小程序码
+
+
+## 五、公众平台配置
 
 ### 1、设置基本信息
 
@@ -128,6 +144,14 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 | ------------ | ------------ |
 | 类目  | 生活服务 > 环保回收/废品回收  |
 | 基础库	  | 2.4.3|
+
+【开发】-【开发设置】-【服务器域名】-【downloadFile合法域名】：
+
+①api.jisuapi.com
+
+②你的云存储下载域名，如下图所示
+
+![云存储域名][1]
 
 ### 2、提交审核
 
@@ -139,15 +163,8 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 ![客服](http://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/10.png "客服")
 
-## ~~待发布内容~~
 
-#### ~~因为提现太敏感，目前小程序内未部署，目前程序已上线，等这两天用户反馈的问题，稳定后再加上，并不会影响目前上线使用，预计9.22添加提现功能。~~
-
-#### 提现功能已发布 2019.9.21
-
-> [https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ](https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ "https://mp.weixin.qq.com/s/0ee3aHbtqhYT6b-0xljleQ")
-
-## 服务与反馈
+## 六、服务与反馈
 
 #### 小程序内有本人详细的联系方式，有问题及时反馈
 #### 如果需要提供安装服务，直接联系我微信：xuhuai66
@@ -155,3 +172,5 @@ list数组下的img为图片地址，id为唯一区分字段，url为点击轮�
 
 > [https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ](https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ "https://mp.weixin.qq.com/s/Jlxn0aw05R8jED4jZtVMwQ")
 
+
+  [1]: https://cqu.oss-cn-shenzhen.aliyuncs.com/img/book/github/yuncunchu.png
