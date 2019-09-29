@@ -1,0 +1,35 @@
+.contain {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+
+.shareImage {
+      margin-top: 90rpx;
+      box-shadow: 0 0 20rpx #e0e0e0;
+      border-radius: 10rpx;
+}
+
+.bottom {
+      display: flex;
+      justify-content: center;
+     align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120rpx;
+      box-shadow: 0 0 20rpx #e0e0e0;
+}
+
+.bottom view {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30rpx;
+      letter-spacing: 4rpx;
+      background: #fbbd08;
+      color: #ffffff;
+      width: 90%;
+      height: 90rpx;
+}

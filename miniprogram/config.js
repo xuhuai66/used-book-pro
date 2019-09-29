@@ -33,7 +33,7 @@ var data = {
                   id: 3
             },
       ],
-      //配置学院，建议不要添加太多，不然前端不好看,默认就行了
+      //配置学院，建议不要添加太多，不然前端不好看
       college: [{
                   name: '通用',
                   id: -1
@@ -100,15 +100,7 @@ var data = {
             },
       ],
 }
-
-/*
-下
-面
-不
-用
-管
-*/
-
+//下面的就别动了
 function formTime(creatTime) {
       let date = new Date(creatTime),
             Y = date.getFullYear(),

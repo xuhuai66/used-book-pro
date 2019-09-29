@@ -1,0 +1,20 @@
+  <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+
+<view class="contain" bindtap="preview" data-link="{{shareImage}}">
+         <image mode="widthFix" class="shareImage" src="{{shareImage}}"></image>
+</view>
+
+<view class="bottom" bindtap="eventSave">
+       <view>保存到手机</view>
+</view>
+<van-dialog confirm-button - color='#fbbd08' id="van-dialog" />
+
+<van-dialog
+    title="授权失败"
+    message="您之前误点了拒绝授权，请允许保存此图片至您的相册"
+    show="{{ show }}"
+    confirm-button-color="#fbbd08" 
+   confirm-button-open-type="openSetting"
+    bind:opensetting="getSetting"
+  >
+  </van-dialog>

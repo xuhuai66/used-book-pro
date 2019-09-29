@@ -19,7 +19,8 @@
             "pages/recharge/recharge",
             "pages/search/search",
             "pages/edit/edit",
-            "pages/web/web"
+            "pages/web/web",
+            "pages/poster/poster"
       ],
       "window": {
             "backgroundColor": "#fbbd08",
@@ -58,6 +59,9 @@
             "van-transition": "vant/transition/index",
             "van-stepper": "vant/stepper/index",
             "van-action-sheet": "vant/action-sheet/index",
-            "van-popup": "vant/popup/index"
+            "van-popup": "vant/popup/index",
+            "canvasdrawer": "/components/canvasdrawer/canvasdrawer",
+            "tips": "components/add_tips/index",
+            "van-dialog": "vant/dialog/index"
       }
 }

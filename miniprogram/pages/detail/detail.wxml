@@ -96,17 +96,29 @@
             <text>首页</text>
             <button class="t_button" bindtap="home"></button>
       </view>
+      <!-->
       <view class="t_card">
             <image src="/images/contact.png"></image>
             <text>反馈</text>
             <button class="t_button" bindtap="go" data-go="/pages/kefu/kefu"></button>
       </view>
+      -->
       <view class="t_card">
             <image src="/images/share.png"></image>
             <text>分享</text>
             <button class="t_button" open-type="share"></button>
       </view>
-      <view class="buy_box">
-           <view class="buy shadow" bindtap="buy">{{publishinfo.status==0?'立即购买':'刚刚被抢光了'}}</view>
+      <view class="t_card" bindtap="creatPoster">
+            <image src="/images/pyq.png"></image>
+            <text>海报</text>
       </view>
+      <view class="buy_box">
+            <view class="buy shadow" bindtap="buy">{{publishinfo.status==0?'立即购买':'刚刚被抢光了'}}</view>
+      </view>
+</view>
+
+<!--悬浮客服功能-->
+<view class="contact_box" bindtap="go" data-go="/pages/kefu/kefu" animation="{{animationKefuData}}">
+     <image src="/images/ww.jpg" ></image>
+     <view >反馈</view>
 </view>

@@ -101,12 +101,12 @@ Page({
             let _id = that.data.publishinfo._id;
             db.collection('publish').doc(_id).get({
                   success(e) {
-                        if(e.data.status==0){
+                        if (e.data.status == 0) {
                               that.paypost();
-                        }else{
+                        } else {
                               wx.showToast({
                                     title: '该书刚刚被抢光了~',
-                                    icon:'none'
+                                    icon: 'none'
                               })
                         }
                   }
@@ -133,7 +133,7 @@ Page({
                         wx.hideLoading();
                         wx.showToast({
                               title: '支付失败，请及时反馈或稍后再试',
-                              icon:'none'
+                              icon: 'none'
                         })
                   }
             });
@@ -154,7 +154,7 @@ Page({
             })
       },
       //修改卖家在售状态
-      setStatus(){
+      setStatus() {
             let that = this
             wx.showLoading({
                   title: '正在处理',
@@ -165,7 +165,7 @@ Page({
                   data: {
                         $url: "changeP", //云函数路由参数
                         _id: that.data.publishinfo._id,
-                        status:1
+                        status: 1
                   },
                   success: res => {
                         console.log('修改订单状态成功')
@@ -175,22 +175,22 @@ Page({
                         wx.hideLoading();
                         wx.showToast({
                               title: '发生异常，请及时和管理人员联系处理',
-                              icon:'none'
+                              icon: 'none'
                         })
                   }
             })
       },
       //创建订单
-      creatOrder(){
-            let that =this;
+      creatOrder() {
+            let that = this;
             db.collection('order').add({
                   data: {
                         creat: new Date().getTime(),
                         status: 1, //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；3、交易作废，退还买家钱款
-                        price: that.data.publishinfo.price,//售价
-                        deliveryid: that.data.publishinfo.deliveryid,//0自1配
-                        ztplace: that.data.publishinfo.place,//自提时地址
-                        psplace:that.data.place,//配送时买家填的地址
+                        price: that.data.publishinfo.price, //售价
+                        deliveryid: that.data.publishinfo.deliveryid, //0自1配
+                        ztplace: that.data.publishinfo.place, //自提时地址
+                        psplace: that.data.place, //配送时买家填的地址
                         bookinfo: {
                               _id: that.data.bookinfo._id,
                               author: that.data.bookinfo.author,
@@ -199,12 +199,12 @@ Page({
                               title: that.data.bookinfo.title,
                         },
                         seller: that.data.publishinfo._openid,
-                        sellid:that.data.publishinfo._id,
+                        sellid: that.data.publishinfo._id,
                   },
                   success(e) {
-                        that.history('购买书籍', that.data.publishinfo.price,2,e._id)
+                        that.history('购买书籍', that.data.publishinfo.price, 2, e._id)
                   },
-                  fail(){
+                  fail() {
                         wx.hideLoading();
                         wx.showToast({
                               title: '发生异常，请及时和管理人员联系处理',
@@ -214,48 +214,48 @@ Page({
             })
       },
       //路由
-      go(e){
+      go(e) {
             wx.navigateTo({
                   url: e.currentTarget.dataset.go,
             })
       },
       //地址输入
-      placeInput(e){
-            this.data.place=e.detail.value
+      placeInput(e) {
+            this.data.place = e.detail.value
       },
-      onShareAppMessage(){
+      onShareAppMessage() {
             return {
-                  title: '这本《'+this.data.bookinfo.title+'》只要￥'+this.data.publishinfo.price+'元，快来看看吧',
+                  title: '这本《' + this.data.bookinfo.title + '》只要￥' + this.data.publishinfo.price + '元，快来看看吧',
                   path: '/pages/detail/detail?scene=' + this.data.publishinfo._id,
             }
       },
       //历史记录
       //记录两次，一次相当于使用微信支付充值，一次是用于购买书籍付款
-      history(name, num, type,id) {
+      history(name, num, type, id) {
             let that = this;
             db.collection('history').add({
                   data: {
                         stamp: new Date().getTime(),
-                        type: 1,//1充值2支付
+                        type: 1, //1充值2支付
                         name: '微信支付',
                         num: num,
-                        oid:app.openid,
+                        oid: app.openid,
                   },
-                  success: function (res) {
+                  success: function(res) {
                         db.collection('history').add({
                               data: {
                                     stamp: new Date().getTime(),
-                                    type: type,//1充值2支付
+                                    type: type, //1充值2支付
                                     name: name,
                                     num: num,
                                     oid: app.openid,
                               },
-                              success: function (res) {
-                                  wx.hideLoading();
-                                  that.sms();
-                                  that.tip();
-                                   wx.redirectTo({
-                                         url: '/pages/success/success?id=' + id,
+                              success: function(res) {
+                                    wx.hideLoading();
+                                    that.sms();
+                                    that.tip();
+                                    wx.redirectTo({
+                                          url: '/pages/success/success?id=' + id,
                                     })
                               }
                         })
@@ -263,12 +263,12 @@ Page({
             })
       },
       //短信提醒
-      sms(){
+      sms() {
             let that = this;
             wx.cloud.callFunction({
                   name: 'sms',
                   data: {
-                        mobile:that.data.userinfo.phone,
+                        mobile: that.data.userinfo.phone,
                         title: that.data.bookinfo.title,
                   },
                   success: res => {
@@ -303,7 +303,7 @@ Page({
                               db.collection('user').where({
                                     _openid: re.result
                               }).get({
-                                    success: function (res) {
+                                    success: function(res) {
                                           if (res.data.length !== 0) {
                                                 app.openid = re.result;
                                                 app.userinfo = res.data[0];
@@ -316,4 +316,51 @@ Page({
                   })
             }
       },
+      //生成海报
+      creatPoster() {
+            let that = this;
+            let pubInfo = {
+                  id: that.data.publishinfo._id,
+                  name: that.data.publishinfo.bookinfo.title,
+                  pic: that.data.publishinfo.bookinfo.pic.replace('http', 'https'),
+                  origin: that.data.publishinfo.bookinfo.price,
+                  now: that.data.publishinfo.price,
+            }
+            wx.navigateTo({
+                  url: "/pages/poster/poster?bookinfo=" + JSON.stringify(pubInfo)
+            })
+      },
+      //客服跳动动画
+      kefuani: function() {
+            let that = this;
+            let i = 0
+            let ii = 0
+            let animationKefuData = wx.createAnimation({
+                  duration: 1000,
+                  timingFunction: 'ease',
+            });
+            animationKefuData.translateY(10).step({
+                  duration: 800
+            }).translateY(0).step({
+                  duration: 800
+            });
+            that.setData({
+                  animationKefuData: animationKefuData.export(),
+            })
+            setInterval(function() {
+                  animationKefuData.translateY(20).step({
+                        duration: 800
+                  }).translateY(0).step({
+                        duration: 800
+                  });
+                  that.setData({
+                              animationKefuData: animationKefuData.export(),
+                        })
+                        ++ii;
+                  console.log(ii);
+            }.bind(that), 1800);
+      },
+      onReady() {
+            this.kefuani();
+      }
 })
