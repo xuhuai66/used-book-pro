@@ -26,7 +26,8 @@ const tenpay = require('tenpay'); //支付核心模块
 exports.main = async(event, context) => {
 
       let userInfo = (await db.collection('user').doc(event.userid).get()).data;
-      if (parseInt(userInfo.parse)<=parseInt(event.num)){
+      //此处应为<而不是<=，否则会造成提现金额恰好等于余额时无法正常提现
+      if (parseInt(userInfo.parse)<parseInt(event.num)){
             return 0;
       }
       //首先获取证书文件
